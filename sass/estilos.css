@@ -1,0 +1,739 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: black;
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+}
+
+/* Estilos para botones. Especificar luego en cada uno el width y margin*/
+.btn, .news .news-sections .box-news .bg-news .box-btn button, #tour-dates .fila .caja-botones .botones, #boton-pag .botones {
+  height: 45px;
+  border: 3px solid white;
+  font-weight: 800;
+  color: white;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.btn-2, #tour-dates .caja-boton #boton-bot {
+  height: 45px;
+  border: 3px solid black;
+  font-weight: 800;
+  color: black;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.btn-2:hover, #tour-dates .caja-boton #boton-bot:hover, .btn:hover, .news .news-sections .box-news .bg-news .box-btn button:hover, #tour-dates .fila .caja-botones .botones:hover, #boton-pag .botones:hover {
+  background-color: #FB3A66;
+  color: white;
+  cursor: pointer;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+
+.cabecera {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100px;
+}
+
+.cabecera .logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0px 0px 0px 10px;
+}
+
+.cabecera .logo h1 {
+  color: white;
+  font-family: "Roboto";
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 70px;
+}
+
+.cabecera #menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cabecera #menu li {
+  text-align: center;
+  width: 90px;
+}
+
+.cabecera #menu li a {
+  border: 2px solid black;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+.cabecera #menu li a:hover {
+  font-weight: bold;
+  border: 2px solid white;
+  background-color: #FB3A66;
+}
+
+/*Página activa */
+#home #menu ul li:nth-child(1) a,
+#news #menu ul li:nth-child(2) a,
+#bio #menu ul li:nth-child(3) a,
+#tour #menu ul li:nth-child(4) a,
+#music #menu ul li:nth-child(5) a,
+#photos #menu ul li:nth-child(6) a,
+#videos #menu ul li:nth-child(7) a,
+#store #menu ul li:nth-child(8) a,
+#club #menu ul li:nth-child(9) a {
+  font-weight: bold;
+  border: 2px solid white;
+  background-color: #FB3A66;
+}
+
+.portada {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.portada img {
+  width: 100%;
+  height: 100vh;
+}
+
+.news {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news #news-franja {
+  background-color: #FB3A66;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news #news-franja .big-heading {
+  font-weight: bold;
+  font-size: 32px;
+  z-index: 2;
+  background-color: #FB3A66;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+.news #news-franja .text-update {
+  font-size: 24px;
+  width: 42%;
+}
+
+.news #news-franja .text-update p {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-animation: moving 10s linear infinite;
+          animation: moving 10s linear infinite;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.news #news-franja h2 {
+  text-align: center;
+  font-family: "Overpass", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 30px;
+  color: white;
+}
+
+.news .news-sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news .news-sections .box-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 33%;
+  height: 300px;
+  margin: 20px;
+  border: solid 2px black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.news .news-sections .box-news .caja-img {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.news .news-sections .box-news img {
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.news .news-sections .box-news img:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.news .news-sections .box-news #nota {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  margin: 10px;
+  width: 35%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.news .news-sections .box-news h3 {
+  width: 100%;
+}
+
+.news .news-sections .box-news .bg-news {
+  background-color: black;
+  height: 100%;
+}
+
+.news .news-sections .box-news .bg-news p {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+
+.news .news-sections .box-news .bg-news .box-btn {
+  width: 100%;
+  position: relative;
+  left: 10px;
+}
+
+.news .news-sections .box-news .bg-news .box-btn button {
+  width: 150px;
+  margin: 10px;
+}
+
+@-webkit-keyframes moving {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes moving {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+footer p {
+  padding: 10px;
+}
+
+footer .redes-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+footer .redes-container ul li {
+  margin: 5px 10px;
+}
+
+footer .redes-container ul li .facebook:hover {
+  color: #3b5998;
+}
+
+footer .redes-container ul li .instagram:hover {
+  color: #e95950;
+}
+
+footer .redes-container ul li .spotify:hover {
+  color: #81b71a;
+}
+
+footer .redes-container ul li .youtube:hover {
+  color: #bb0000;
+}
+
+footer .redes-container ul li a {
+  color: #c2b3b3;
+  list-style: none;
+  font-size: 24px;
+}
+
+footer .redes-container ul li a :hover {
+  border-bottom: 2px solid white;
+}
+
+/* Bio */
+#bio-bg {
+  background-color: black;
+  /*
+    .img-uno{background-image: url("../img/alex-kellerman-bio.jpg")   }
+    */
+}
+
+#bio-bg .parallax, #bio-bg .texto {
+  margin: 0 auto;
+}
+
+#bio-bg .parallax {
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35rem;
+  max-width: 100%;
+  position: relative;
+}
+
+#bio-bg .parallax .texto-interior {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  left: 35%;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  width: 25%;
+  text-shadow: 3px 3px 2px black;
+  border-bottom: 5px solid #FB3A66;
+}
+
+#bio-bg .texto {
+  padding: 4%;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+#bio-bg .texto h2 {
+  color: #FB3A66;
+}
+
+#bio-bg .texto .bio-caja-texto {
+  margin: 10px;
+}
+
+#bio-bg .texto .line {
+  border-bottom: 1.5px solid #FB3A66;
+  width: 20%;
+  margin: 5px auto;
+}
+
+#bio-bg .img-uno {
+  background-image: url("../img/member-1.jpg");
+}
+
+#bio-bg .img-dos {
+  background-image: url("../img/member-2.jpg");
+}
+
+#bio-bg .img-tres {
+  background-image: url("../img/member-3.jpg");
+}
+
+#bio-bg .img-cuatro {
+  background-image: url("../img/member-4.jpg");
+}
+
+/* Tour */
+.tour-bg {
+  text-align: center;
+  font-family: "Roboto";
+  height: 800px;
+  background-image: url("../img/tour-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.tour-bg .tour-titles {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tour-bg .tour-titles h1 {
+  font-size: 150px;
+}
+
+.tour-bg .tour-titles h2 {
+  font-size: 120px;
+}
+
+.tour-bg .tour-titles img {
+  width: 400px;
+}
+
+.tour-bg .tour-titles div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dates-title h3 {
+  color: white;
+  margin: 10px 0px 0px 0px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#tour-dates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#tour-dates .fila {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#tour-dates .fila .dates-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin-left: 400px;
+  border-bottom: 1px solid #FB3A66;
+}
+
+#tour-dates .fila .dates-box .date {
+  border: 3px solid white;
+  border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 20px;
+}
+
+#tour-dates .fila .dates-box .place {
+  font-weight: 800;
+  margin: 0px 0px 5px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#tour-dates .fila .dates-box .place .place1 {
+  color: grey;
+  font-size: 30px;
+}
+
+#tour-dates .fila .dates-box .place .place2 {
+  color: white;
+  font-size: 22px;
+}
+
+#tour-dates .fila .caja-botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 50%;
+  border-bottom: 1px solid #FB3A66;
+  margin-right: 400px;
+}
+
+#tour-dates .fila .caja-botones .botones {
+  width: 110px;
+  margin: 5px;
+}
+
+#tour-dates .caja-boton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+}
+
+#tour-dates .caja-boton #boton-bot {
+  width: 300px;
+  margin: 30px;
+}
+
+/* Photos */
+.galeria-container {
+  /*Si pongo 100vh me sale scroll. Así que resto el header y footer*/
+  min-height: calc(98.9vh - 80px - 50px);
+}
+
+.galeria-container .menu-galeria {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FB3A66;
+}
+
+.galeria-container .menu-galeria li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.galeria-container .menu-galeria a:hover {
+  color: white;
+}
+
+#galeria {
+  background-color: black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
+#galeria div {
+  max-width: 500px;
+  /*Flex para sacar lo que sobresale */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+}
+
+#galeria img {
+  width: 100%;
+}
+
+#galeria img:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  cursor: pointer;
+}
+
+#boton-pag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+#boton-pag .botones {
+  width: 50px;
+  margin: 5px;
+}
+
+/* Videos */
+.row {
+  margin: 10px;
+}
+
+/* Club */
+.club-logo img {
+  width: 300px;
+}
+
+.club h2 {
+  color: grey;
+  margin: 10px;
+}
+
+.formulario {
+  background-color: #d4d4d4;
+  padding: 5px;
+}
+
+.formulario div {
+  margin: 5px;
+}
+
+.formulario div label {
+  font-weight: 400;
+  margin: 5px;
+}
+
+.formulario div input {
+  margin: 5px;
+  padding: 5px;
+}
+
+.formulario div select {
+  margin: 5px;
+  padding: 5px;
+}
+
+.formulario div select label {
+  margin: 100px;
+}
+
+/* Páginas en construcción*/
+.technical-difficulties img {
+  width: 100%;
+  background-size: cover;
+}
+/*# sourceMappingURL=estilos.css.map */
