@@ -15,6 +15,11 @@ body {
   font-weight: 300;
 }
 
+.contenedor {
+  width: 100%;
+  max-width: 2000px;
+}
+
 /* Estilos para botones. Especificar luego en cada uno el width y margin*/
 .btn, .news .news-sections .box-news .bg-news .box-btn button, #tour-dates .fila .caja-botones .botones, #boton-pag .botones {
   height: 45px;
@@ -40,6 +45,10 @@ body {
   cursor: pointer;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 ul {
@@ -61,6 +70,7 @@ ul li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100px;
+  width: 100%;
 }
 
 .cabecera .logo {
@@ -68,6 +78,7 @@ ul li {
       -ms-grid-row-align: center;
       align-self: center;
   padding: 0px 0px 0px 10px;
+  width: 40%;
 }
 
 .cabecera .logo h1 {
@@ -82,9 +93,13 @@ ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 60%;
 }
 
 .cabecera #menu li {
@@ -130,7 +145,7 @@ ul li {
 
 .portada img {
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 
 .news {
@@ -160,6 +175,7 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .news #news-franja .big-heading {
@@ -207,22 +223,30 @@ ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .news .news-sections .box-news {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 33%;
-  height: 300px;
-  margin: 20px;
+  max-width: 600px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px;
   border: solid 2px black;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .news .news-sections .box-news .caja-img {
-  width: 65%;
+  width: 100%;
+  height: auto;
+  min-height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -242,6 +266,10 @@ ul li {
   cursor: pointer;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .news .news-sections .box-news #nota {
@@ -256,14 +284,16 @@ ul li {
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
-  margin: 10px;
-  width: 35%;
+  margin: 0 10px 10px 10px;
+  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .news .news-sections .box-news h3 {
   width: 100%;
+  text-align: center;
+  font-size: 24px;
 }
 
 .news .news-sections .box-news .bg-news {
@@ -280,13 +310,17 @@ ul li {
 
 .news .news-sections .box-news .bg-news .box-btn {
   width: 100%;
-  position: relative;
-  left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .news .news-sections .box-news .bg-news .box-btn button {
   width: 150px;
-  margin: 10px;
+  margin: 0px 0px 10px 10px;
 }
 
 @-webkit-keyframes moving {
@@ -670,6 +704,10 @@ footer .redes-container ul li a :hover {
 #galeria img:hover {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   cursor: pointer;
 }
 
@@ -735,5 +773,144 @@ footer .redes-container ul li a :hover {
 .technical-difficulties img {
   width: 100%;
   background-size: cover;
+}
+
+/* Responsive Design */
+/*
+@media only screen and (max-width: 768px) {
+    body {
+        .cabecera {
+            background-color: orange;
+        }
+    }
+}
+*/
+/* Menu bar */
+#btn-menu {
+  display: none;
+}
+
+header label {
+  margin: 0;
+  display: none;
+  padding: 0px 25px;
+  color: white;
+  font-size: 40px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+/*
+header label:hover {
+    background-color: $color-secundario;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  .contenedor .cabecera {
+    position: relative;
+    height: 75px;
+  }
+  .contenedor .cabecera .logo {
+    width: 70%;
+  }
+  .contenedor .cabecera .logo h1 {
+    font-size: 40px;
+  }
+  .contenedor header label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenedor header #menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    width: 50%;
+    top: 75px;
+    right: -300px;
+    z-index: 100;
+  }
+  .contenedor header #menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: black;
+    width: 100%;
+  }
+  .contenedor header #menu ul li {
+    width: 100%;
+  }
+  .contenedor header #btn-menu:checked ~ #menu {
+    right: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-color: #FB3A66;
+  }
+  .contenedor .news #news-franja {
+    height: 40px;
+  }
+  .contenedor .news #news-franja .big-heading {
+    font-size: 24px;
+  }
+  .contenedor .news #news-franja .text-update p {
+    font-size: 16px;
+  }
+  .contenedor .news .news-sections {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contenedor .news .news-sections .box-news {
+    width: auto;
+    margin: 10px;
+  }
+  .contenedor .news .news-sections .box-news .caja-img {
+    min-height: 0px;
+  }
+  .contenedor .news .news-sections .box-news #nota {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenedor .news .news-sections .box-news #nota h3 {
+    padding-top: 0px;
+    font-size: 18px;
+  }
+  .contenedor .news .news-sections .box-news #nota .bg-news p {
+    padding: 10px 10px;
+    font-size: 10px;
+  }
+  .contenedor .news .news-sections .box-news #nota .bg-news .box-btn button p {
+    font-size: 12px;
+  }
+  .contenedor footer {
+    width: 100%;
+  }
+  .contenedor footer p {
+    font-size: 10px;
+  }
+  .contenedor .redes-container ul li a {
+    font-size: 16px;
+  }
+  .contenedor .redes-container ul li {
+    margin: 5px 5px;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */

@@ -2,6 +2,7 @@ $fuente-principal: 'Overpass', sans-serif;
 $fuente-logo: 'Roboto';
 // $fuente-logo: 'Spicy Rice', cursive;
 //$color-principal: #170459;
+//$color-principal:#1E2025;
 $color-principal: black;
 $color-secundario: #FB3A66;
 $color-tres: white;
@@ -23,6 +24,11 @@ body {
     background-color: $color-principal;
     font-family: $fuente-principal;
     font-weight: 300;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 2000px;
 }
 
 /* Estilos para botones. Especificar luego en cada uno el width y margin*/
@@ -49,6 +55,7 @@ body {
     color: $color-tres;
     cursor: pointer;
     transform: scale(1.15);
+    transition: transform 0.5s;
 }
 
 ul {
@@ -64,11 +71,13 @@ ul {
     display: flex;
     justify-content: space-between;
     height: 100px;
+    width: 100%;
 
     .logo {
 
         align-self: center;
         padding: 0px 0px 0px 10px;
+        width: 40%;
 
         h1 {
             color: white;
@@ -81,7 +90,9 @@ ul {
 
     #menu {
         display: flex;
+        justify-content: flex-end;
         align-items: center;
+        width: 60%;
 
         li {
             text-align: center;
@@ -125,7 +136,7 @@ ul {
 
     img{
         width: 100%;
-        height: 100vh;
+        height: auto;
     }
 }
 
@@ -142,6 +153,7 @@ ul {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
    
 
         .big-heading {
@@ -180,17 +192,21 @@ ul {
 
     .news-sections {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         .box-news {
             display: flex;
-            width: 33%;
-            height: 300px;
-            margin: 20px;
+            max-width: 600px;
+            flex-wrap: wrap;
+            margin: 10px;
             border: solid 2px $color-principal;
             box-sizing: border-box;
     
             .caja-img {
-                width: 65%;
+                width: 100%;
+                height: auto;
+                min-height: 400px;
                 display: flex;
                 justify-content: center;
             }
@@ -204,6 +220,7 @@ ul {
             img:hover {
                 cursor: pointer;
                 transform: scale(1.1);
+                transition: transform 0.5s;
             }
     
             #nota {
@@ -211,13 +228,15 @@ ul {
                 flex-direction: column;
                 align-items: center;
                 background-color:$color-tres;
-                margin: 10px;
-                width: 35%;
+                margin: 0 10px 10px 10px;
+                width: 100%;
                 box-sizing: border-box;
             }
             
             h3  {
                width: 100%;
+               text-align: center;
+               font-size: 24px;
             }
             
             .bg-news {
@@ -233,13 +252,15 @@ ul {
     
                 .box-btn {
                     width: 100%;
-                    position: relative;
-                    left: 10px;
+                    display: flex;
+                    justify-content: center;
+                  //  position: relative;
+                 //   left: 10px;
                     
                     button {
                         @extend .btn;
                         width: 150px;
-                        margin: 10px
+                        margin: 0px 0px 10px 10px;
                     }
                 }
             }
@@ -549,6 +570,7 @@ footer {
 
     img:hover {
         transform: scale(1.03);
+        transition: transform 0.5s;
         cursor: pointer;
     }
 } // #galeria
@@ -616,4 +638,183 @@ footer {
     width: 100%;
     background-size: cover;
 }
+
+/* Responsive Design */
+
+/*
+@media only screen and (max-width: 768px) {
+    body {
+        .cabecera {
+            background-color: orange;
+        }
+    }
+}
+*/
+/* Menu bar */
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    margin: 0;
+    display: none;
+    padding: 0px 25px;
+    color: white;
+    font-size: 40px;
+    transition: all 500ms ease;
+}
+
+/*
+header label:hover {
+    background-color: $color-secundario;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 600px ) {
+    
+.contenedor {
+
+    .cabecera {
+
+        position: relative;
+        height: 75px;
+
+        .logo {
+            width: 70%;
+             h1 {
+                font-size: 40px;
+            }
+        }
+    } // cabecera
+   
+  
+    header {
+
+        label {
+            display: flex;
+            align-items: center;
+        }
+
+        #menu {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 50%;
+            top: 75px; //Se pocisiona debajo de la cabecera que tiene 100px
+            right: -300px; //Para que quede oculto
+            z-index: 100;
+    
+            ul {
+                flex-direction: column;
+                background-color: black;
+                width: 100%;
+    
+                li {
+                    width: 100%;
+                }
+            }
+        }   
+        
+         #btn-menu:checked ~ #menu {  
+            right: 0px;
+            display: flex;
+            justify-content: flex-end;
+            background-color: $color-secundario;
+         }
+    }
+
+    .news {
+        #news-franja {
+
+            height: 40px;
+
+            .big-heading {
+                font-size: 24px;
+            }
+
+            .text-update {
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .news-sections {
+            
+            display: flex;
+            flex-direction: column;
+   
+               .box-news {
+
+                   width: auto;
+                   margin: 10px;
+   
+                   .caja-img {
+                       min-height: 0px;
+                   }
+
+                   #nota {
+
+                    align-items: center;
+            
+                    h3 {
+                        padding-top: 0px;
+                        font-size: 18px;
+                    }
+            
+                    .bg-news {
+            
+                        p {
+                            padding: 10px 10px;
+                            font-size: 10px;
+                        }
+            
+                        .box-btn {
+            
+                            button {
+                                                                        
+                                p {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+               } //.box-news
+
+
+        } // .news-sections
+    } //news
+
+        
+     
+     
+    
+          
+       
+    footer {
+        width: 100%;
+    }
+    
+    footer p {
+        font-size: 10px;
+    }
+    
+    
+    .redes-container ul li a {
+        font-size: 16px;
+    }
+    
+    .redes-container ul li{
+        margin: 5px 5px;
+    }
+    
+}
+
+
+}    
 
