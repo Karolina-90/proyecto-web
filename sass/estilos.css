@@ -55,6 +55,7 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: black;
 }
 
 ul li {
@@ -100,14 +101,20 @@ ul li {
       -ms-flex-align: center;
           align-items: center;
   width: 60%;
+  position: relative;
 }
 
-.cabecera #menu li {
+.cabecera #menu ul {
+  position: absolute;
+  /* Submenu**/
+}
+
+.cabecera #menu ul li {
   text-align: center;
-  width: 90px;
+  width: 100px;
 }
 
-.cabecera #menu li a {
+.cabecera #menu ul li a {
   border: 2px solid black;
   text-decoration: none;
   color: white;
@@ -116,17 +123,54 @@ ul li {
   text-align: center;
 }
 
-.cabecera #menu li a:hover {
+.cabecera #menu ul li a:hover {
   font-weight: bold;
   border: 2px solid white;
   background-color: #FB3A66;
 }
 
+.cabecera #menu ul .desplegable {
+  z-index: 100;
+}
+
+.cabecera #menu ul .desplegable i {
+  color: #FB3A66;
+}
+
+.cabecera #menu ul .desplegable #submenu {
+  display: none;
+}
+
+.cabecera #menu ul .desplegable:hover #submenu {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 /*Página activa */
+/*
+#home   #menu ul li:nth-child(1) a,
+#news   #menu ul li:nth-child(2) a,
+#bio    #menu ul li:nth-child(3) a,
+#tour   #menu ul li:nth-child(4) a,
+#music  #menu ul li:nth-child(5) a,
+#photos #menu ul li:nth-child(6) a,
+#videos #menu ul li:nth-child(7) a,
+#store  #menu ul li:nth-child(8) a,
+#club   #menu ul li:nth-child(9) a {
+    font-weight: bold;
+    border: 2px solid $color-tres;
+    background-color: $color-secundario;
+}
+*/
 #home #menu ul li:nth-child(1) a,
-#news #menu ul li:nth-child(2) a,
-#bio #menu ul li:nth-child(3) a,
-#tour #menu ul li:nth-child(4) a,
+#bio #menu ul li:nth-child(2) a,
+#tour #menu ul li:nth-child(3) a,
+#media #menu ul li:nth-child(4) a,
 #music #menu ul li:nth-child(5) a,
 #photos #menu ul li:nth-child(6) a,
 #videos #menu ul li:nth-child(7) a,
@@ -272,7 +316,7 @@ ul li {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-.news .news-sections .box-news #nota {
+.news .news-sections .box-news .nota {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -650,6 +694,7 @@ footer .redes-container ul li a :hover {
   margin: 30px;
 }
 
+/* Music */
 /* Photos */
 .galeria-container {
   /*Si pongo 100vh me sale scroll. Así que resto el header y footer*/
@@ -776,15 +821,6 @@ footer .redes-container ul li a :hover {
 }
 
 /* Responsive Design */
-/*
-@media only screen and (max-width: 768px) {
-    body {
-        .cabecera {
-            background-color: orange;
-        }
-    }
-}
-*/
 /* Menu bar */
 #btn-menu {
   display: none;
@@ -800,12 +836,6 @@ header label {
   transition: all 500ms ease;
 }
 
-/*
-header label:hover {
-    background-color: $color-secundario;
-}
-
-/* Responsive */
 @media only screen and (max-width: 600px) {
   .contenedor .cabecera {
     position: relative;
@@ -843,7 +873,6 @@ header label:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: black;
     width: 100%;
   }
   .contenedor header #menu ul li {
@@ -884,20 +913,20 @@ header label:hover {
   .contenedor .news .news-sections .box-news .caja-img {
     min-height: 0px;
   }
-  .contenedor .news .news-sections .box-news #nota {
+  .contenedor .news .news-sections .box-news .nota {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .contenedor .news .news-sections .box-news #nota h3 {
+  .contenedor .news .news-sections .box-news .nota h3 {
     padding-top: 0px;
     font-size: 18px;
   }
-  .contenedor .news .news-sections .box-news #nota .bg-news p {
+  .contenedor .news .news-sections .box-news .nota .bg-news p {
     padding: 10px 10px;
     font-size: 10px;
   }
-  .contenedor .news .news-sections .box-news #nota .bg-news .box-btn button p {
+  .contenedor .news .news-sections .box-news .nota .bg-news .box-btn button p {
     font-size: 12px;
   }
   .contenedor footer {
@@ -906,11 +935,11 @@ header label:hover {
   .contenedor footer p {
     font-size: 10px;
   }
-  .contenedor .redes-container ul li a {
-    font-size: 16px;
-  }
-  .contenedor .redes-container ul li {
+  .contenedor footer .redes-container ul li {
     margin: 5px 5px;
+  }
+  .contenedor footer .redes-container ul li a {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
