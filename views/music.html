@@ -2,31 +2,48 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Music</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400;600;700;900&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Spicy+Rice&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
+    <title>Blackout | The Official Website</title>
+    <meta name="keywords" content="Blackout, blackout, rock, alternative rock, band, Member name 1, Member name 2, Member name 3, Member name 4, Most famous song name 1, Most famous song name 2, Most famous song name 3">
+    <meta name="description" content="The Official Blackout Website with all the latest news, tour dates, media and more. Join the Fan Club to become a member and have access to special benefits">
 </head>
 
 <body id="music">
 
+    <div class="contenedor">
+
      <!-- Header -->
+
      <header class="cabecera">
         
         <div class="logo"> 
             <h1>BLACKOUT</h1>
         </div>
 
-         <!-- Menú -->   
+       
+        <input type="checkbox" id="btn-menu"/>
+        <label for="btn-menu"><i class="fas fa-bars"></i></label>
+               
+        <!-- Menú -->   
         <nav id="menu">
-            <ul>
+            <ul >
                 <li><a href="../index.html">HOME</a></li>
-                <li><a href="news.html">NEWS</a></li>
+                <!--li><a href="views/news.html">NEWS</a></li>-->
                 <li><a href="bio.html">BIO</a></li>
                 <li><a href="tour.html">TOUR</a></li>
-                <li><a href="music.html">MUSIC</a></li>
-                <li><a href="photos.html">PHOTOS</a></li>
-                <li><a href="videos.html">VIDEOS</a></li>
+                <!--li><a href="views/music.html">MUSIC</a><li>-->
+                <li class="desplegable"><a href="#">MEDIA <i class="fas fa-sort-down"></i></a>
+                    <ul id="submenu">
+                        <li><a href="music.html">MUSIC</a></li>
+                        <li><a href="photos.html">PHOTOS</a></li>
+                        <li><a href="videos.html">VIDEOS</a></li>
+                    </ul>
+                </li>
+                <!--li><a href="views/videos.html">VIDEOS</a></li>-->
                 <li><a href="store.html">STORE</a></li>
                 <li><a href="club.html">CLUB</a></li>
             </ul>
@@ -34,17 +51,277 @@
 
     </header>
 
-    <div>
-        <i class="fas fa-play"></i>
-    </div>
+    <main class="play">
+        <div class="disco">
+            <h2>BAD THINGS</h2>
+            <img src="../img/music/album-cover.jpg" alt="albúm-cover">
+            <p class="album-info"><span class="bold">Artist: </span>Notorious Gun</p>
+            <p class="album-info"><span class="bold">Release Date: </span>December 20, 2016</p>
+            <p class="album-info"><span class="bold">Genres: </span>Indie, Indie Rock, Rock </p>
+
+        </div>
+
+        <div class="tracklist">
+            <h3>TRACKLIST</h3>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>1.</p>
+                </div>
+                <div class="track-title">
+                    <p>Desired Feelings</p>
+                </div>
+                <div class="track-time">
+                    <p>3:24</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="https://soundcloud.com/alice-bass/secrets-instrumental-prueba"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>2.</p>
+                </div>
+                <div class="track-title">
+                    <p>Focusing</p>
+                </div>
+                <div class="track-time">
+                    <p>4:42</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="https://soundcloud.com/alice-bass/secrets-instrumental-prueba"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>3.</p>
+                </div>
+                <div class="track-title">
+                    <p>Night Club</p>
+                </div>
+                <div class="track-time">
+                    <p>3:54</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="https://soundcloud.com/alice-bass/secrets-instrumental-prueba"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>4.</p>
+                </div>
+                <div class="track-title">
+                    <p>Night Club</p>
+                </div>
+                <div class="track-time">
+                    <p>3:54</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="https://soundcloud.com/alice-bass/secrets-instrumental-prueba"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>5.</p>
+                </div>
+                <div class="track-title">
+                    <p>Night Club</p>
+                </div>
+                <div class="track-time">
+                    <p>3:54</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="https://soundcloud.com/alice-bass/secrets-instrumental-prueba"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>6.</p>
+                </div>
+                <div class="track-title">
+                    <p>Night Club</p>
+                </div>
+                <div class="track-time">
+                    <p>3:54</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="https://soundcloud.com/alice-bass/secrets-instrumental-prueba"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>7.</p>
+                </div>
+                <div class="track-title">
+                    <p>Night Club</p>
+                </div>
+                <div class="track-time">
+                    <p>3:54</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="https://soundcloud.com/alice-bass/secrets-instrumental-prueba"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>8.</p>
+                </div>
+                <div class="track-title">
+                    <p>Night Club</p>
+                </div>
+                <div class="track-time">
+                    <p>3:54</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="https://soundcloud.com/alice-bass/secrets-instrumental-prueba"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>9.</p>
+                </div>
+                <div class="track-title">
+                    <p>Night Club</p>
+                </div>
+                <div class="track-time">
+                    <p>3:54</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="https://soundcloud.com/alice-bass/secrets-instrumental-prueba"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>10.</p>
+                </div>
+                <div class="track-title">
+                    <p>Night Club</p>
+                </div>
+                <div class="track-time">
+                    <p>3:54</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="https://soundcloud.com/alice-bass/secrets-instrumental-prueba"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>11.</p>
+                </div>
+                <div class="track-title">
+                    <p>Night Club</p>
+                </div>
+                <div class="track-time">
+                    <p>3:54</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="https://soundcloud.com/alice-bass/secrets-instrumental-prueba"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>12.</p>
+                </div>
+                <div class="track-title">
+                    <p>Night Club</p>
+                </div>
+                <div class="track-time">
+                    <p>3:54</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="https://rebellion.qodeinteractive.com/wp-content/uploads/2016/09/Desired_Feelings.mp3"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="track-order">
+                <div class="order">
+                    <p>13.</p>
+                </div>
+                <div class="track-title">
+                    <p>Night Club</p>
+                </div>
+                <div class="track-time">
+                    <p>3:54</p>
+                </div>
+                <div class="play-button">
+                    <a href="">
+                        <audio src="../audio/hysteria.mp3" type="audio/mp3"></audio>
+                        <i class="fas fa-play"></i>
+                </a>
+                </div>
+            </div>
+
+        </div> <!--tracklist-->
+
+        <div class="more-album">
+            <div class="about-album">
+                <h3>ABOUT ALBUM</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis perferendis numquam ipsa quibusdam inventore doloremque vero similique magnam odit culpa. Placeat, dolorum! Perspiciatis at culpa, numquam corrupti laboriosam magnam incidunt!</p>
+            </div>
+    
+            <div class="red-album">
+                <div class="available">AVAILABLE ON</div>
+                <div class="share">SHARE ON</div>
+            </div>
+
+        </div>
+
+        
+        
  
-    <div class="technical-difficulties">
-        <img src="../img/technical-difficulties-4.jpg" alt="">
-    </div>
+
+    </main>
 
     <!-- footer -->
     <footer> 
-        <p> © NAME BAND 2020</p>
+        <p> © BLACKOUT 2020</p>
         <p>Designed by me</p>
         <!-- Íconos con Link a Redes Sociales --> 
         <div class="redes-container">
@@ -56,7 +333,7 @@
             </ul>                     
         </div>
     </footer>  
-    
+</div>
 
 </body>
 </html> 
