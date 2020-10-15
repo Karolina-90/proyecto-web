@@ -698,7 +698,7 @@ footer .redes-container ul li a :hover {
 #music .contenedor {
   display: -ms-grid;
   display: grid;
-  grid: 1fr auto auto 1fr/repeat(12, 1fr);
+  grid: 2fr auto 1fr/repeat(12, 1fr);
 }
 
 #music .contenedor .cabecera {
@@ -756,18 +756,6 @@ footer .redes-container ul li a :hover {
 #music .contenedor .play .disco img {
   width: 100%;
   height: auto;
-}
-
-#music .contenedor .play .disco p {
-  color: grey;
-}
-
-#music .contenedor .play .disco p .bold {
-  color: white;
-}
-
-#music .contenedor .play .disco .album-info {
-  padding: 10px 0 5px 0;
 }
 
 #music .contenedor .play .tracklist {
@@ -837,25 +825,77 @@ footer .redes-container ul li a :hover {
 #music .contenedor .play .more-album {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 8;
-  grid-area: 3 / 3 / 4 / 11;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: 3 / 1 / 4 / 13;
+  display: -ms-grid;
+  display: grid;
+  grid: 1fr 1fr/ 1fr 1fr;
+}
+
+#music .contenedor .play .more-album h3 {
+  color: white;
+}
+
+#music .contenedor .play .more-album p {
+  color: white;
+  padding: 10px 10px 10px 0;
+}
+
+#music .contenedor .play .more-album .album-info {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 10px 0 5px 0;
+}
+
+#music .contenedor .play .more-album .album-info p {
+  color: grey;
+}
+
+#music .contenedor .play .more-album .album-info p .bold {
+  color: white;
 }
 
 #music .contenedor .play .more-album .about-album {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 6;
-  grid-area: 3 / 1 / 4 / 7;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 3 / 2;
+  padding: 10px 10px 10px 0;
 }
 
 #music .contenedor .play .more-album .red-album {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 6;
-  grid-area: 3 / 7 / 4 / 13;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 3 / 3;
+  padding: 10px 10px 10px 0;
+}
+
+#music .contenedor .play .more-album .red-album p {
+  font-size: 22px;
+  color: white;
+  padding: 10px 10px 10px 30px;
+  font-weight: 700;
+}
+
+#music .contenedor .play .more-album .red-album a {
+  color: white;
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+}
+
+#music .contenedor .play .more-album .red-album a:hover {
+  color: #FB3A66;
+}
+
+#music .contenedor .play .more-album .red-album .share {
+  padding: 50px 0 0 0;
 }
 
 #music .contenedor footer {
