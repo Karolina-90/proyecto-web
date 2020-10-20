@@ -2,13 +2,19 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Club</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400;600;700;900&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Spicy+Rice&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
+    <title>Blackout | The Official Website</title>
+    <meta name="keywords" content="Blackout, blackout, rock, alternative rock, band, Member name 1, Member name 2, Member name 3, Member name 4, Most famous song name 1, Most famous song name 2, Most famous song name 3">
+    <meta name="description" content="The Official Blackout Website with all the latest news, tour dates, media and more. Join the Fan Club to become a member and have access to special benefits">
 </head>
 
 <body id="club">
+
+    <div class="contenedor">
      <!-- Header -->
      <header class="cabecera">
         
@@ -16,27 +22,22 @@
             <h1>BLACKOUT</h1>
         </div>
 
-        <!-- Íconos con Link a Redes Sociales 
-            <div class="redes-container">
-                <ul>
-                    <li><a href="http://www.facebook.com" class="facebook"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="http://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="http://www.spotify.com" class="spotify"><i class="fab fa-spotify"></i></a></li>
-                    <li><a href="http://www.youtube.com" class="youtube"><i class="fab fa-youtube"></i></a></li>
-                </ul>                     
-            </div>  
-        -->   
-
         <!-- Menú -->   
         <nav id="menu">
-            <ul>
+            <ul >
                 <li><a href="../index.html">HOME</a></li>
-                <li><a href="news.html">NEWS</a></li>
+                <!--li><a href="views/news.html">NEWS</a></li>-->
                 <li><a href="bio.html">BIO</a></li>
                 <li><a href="tour.html">TOUR</a></li>
-                <li><a href="music.html">MUSIC</a></li>
-                <li><a href="photos.html">PHOTOS</a></li>
-                <li><a href="videos.html">VIDEOS</a></li>
+                <!--li><a href="views/music.html">MUSIC</a><li>-->
+                <li class="desplegable"><a href="#">MEDIA <i class="fas fa-sort-down"></i></a>
+                    <ul id="submenu">
+                        <li><a href="music.html">MUSIC</a></li>
+                        <li><a href="photos.html">PHOTOS</a></li>
+                        <li><a href="videos.html">VIDEOS</a></li>
+                    </ul>
+                </li>
+                <!--li><a href="views/videos.html">VIDEOS</a></li>-->
                 <li><a href="store.html">STORE</a></li>
                 <li><a href="club.html">CLUB</a></li>
             </ul>
@@ -44,118 +45,217 @@
 
     </header>
 
-    <!--imagen del club de la banda-->
-    <div class="club-logo">
-        <img src="../img/logo-black.png" alt="logo del club">
-    </div>
-
     <!--formulario de registro-->
-    <div class="club">
-        <h2>CREATE AN ACCOUNT AND BECOME A MEMBER</h2>
+    <div class="club-principal">
+        <div class="club-img">
+            <h2>THE BLACKOUT CLUB</h2>
+            <h3>CREATE AN ACCOUNT AND BECOME A MEMBER</h3>
+            <div class="club-enter">
+                <a href="#">LOGIN</a>
+                <a href="#join">JOIN NOW</a>
+            </div>       
+        </div>
     </div>
+
+    <div class="benefits-club">
+
+        <div class="block-1">
+
+            <div class="block">
+                
+                <div class="block-img">
+                    <img src="../img/club/rock-hand.svg" alt="">
+                </div>
+
+                <div class="block-text">
+                    <h4>Exclusive Content</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, quos tenetur.</p>
+                </div>
+            </div>
     
+            <div class="block">
+                
+                <div class="block-img">
+                    <img src="../img/club/rock-hand.svg" alt="">
+                </div>
 
-    <form class="formulario">
+                <div class="block-text">
+                    <h4>Exclusive Merchandise</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, quos tenetur.</p>
+                </div>
+            </div>
 
-        <!--First Name-->
-        <div>
-            <label for="nombre">First Name*</label><br>
-            <input type="text" id="nombre"  placeholder="FIRST NAME"/>
         </div>
 
-        <!--Last Name-->
-        <div>
-            <label for="nombre">Last Name*</label><br>
-            <input type="text" id="nombre" placeholder="LAST NAME"/>
+        <div class="block-2">
+            
+            <div class="block">
+
+                <div class="block-img">
+                    <img src="../img/club/rock-hand.svg" alt="">
+                </div>
+
+                <div class="block-text">
+                    <h4>Discounts on Merch</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, quos tenetur.</p>
+                </div>
+            </div>
+    
+            <div class="block">
+
+                <div class="block-img">
+                    <img src="../img/club/rock-hand.svg" alt="">
+                </div>
+
+                <div class="block-text">
+                    <h4>Presale Tickets</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, quos tenetur.</p>
+                </div>
+
+            </div>
+
         </div>
 
-        <!--Username-->
-        <div>
-            <label for="username">Username*</label><br>
-            <input type="text" id="username" placeholder="USERNAME"/>
+        <div class="block-3">
+            
+            <div class="block">
+                
+                <div class="block-img">
+                    <img src="../img/club/rock-hand.svg" alt="">
+                </div>
+
+                <div class="block-text">
+                    <h4>Free Downloads</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, quos tenetur.</p>
+                </div>
+            </div>
+    
+            <div class="block">
+                
+                <div class="block-img">
+                    <img src="../img/club/rock-hand.svg" alt="">
+                </div>
+
+                <div class="block-text">
+                    <h4>Exclusive Contests</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, quos tenetur.</p>
+                </div>
+            </div>
+
         </div>
+   
+<div id="join" class="formulario">
 
-        <!--Email-->
-        <div>
-            <label for="email">E-mail*</label><br>
-            <input type="email" id="email" placeholder="E-MAIL"/>
-        </div>
 
-        <!--Confirm Email-->
-        <div>
-            <label for="confirm-email">Confirm E-mail*</label><br>
-            <input type="email" id="confirm-email" placeholder="CONFIRM E-MAIL"/>
-        </div>
+        <form>
 
-        <!--Password-->
-        <div>
-            <label for="password">Password*</label><br>
-            <input type="password" id="password" placeholder="PASSWORD"/>
-        </div>
+            <div class="form-container">
 
-        <!--Confirm Password-->
-        <div>
-            <label for="confirm-password">Confirm Password*</label><br>
-            <input type="password" id="confirm-password" placeholder="CONFIRM PASSWORD"/>
-        </div>
+            <!--First Name-->
+            <div id="name" class="campos">
+                <label for="nombre">First Name*</label>
+                <input type="text" id="nombre"  placeholder="FIRST NAME"/>
+            </div>
 
-        <!--Date of Birth-->
-        <div>
-            <label for="date">Date of Birth*</label><br>
-            <input type="date" id="date">
-        </div>
+            <!--Last Name-->
+            <div id="surname" class="campos">
+                <label for="nombre">Last Name*</label>
+                <input type="text" id="nombre" placeholder="LAST NAME"/>
+            </div>
 
-        <!--Gender-->
-        <div>
-            <label for="gender">Gender*</label><br>
-            <label>Male</label>
-            <input type="radio" name="gender"/>
-            <label>Female</label>
-            <input type="radio" name="gender"/>
-            <label>Other</label>
-            <input type="radio" name="gender"/>
-        </div>
+            <!--Username-->
+            <div id="username" class="campos">
+                <label for="username">Username*</label>
+                <input type="text" id="username" placeholder="USERNAME"/>
+            </div>
 
-        <!--Country-->
-        <div>
-            <label>Country*</label><br>
-            <select name="country">
-                <option value="Select">SELECT...</option>
-                <option value="Argentina">Argentina</option>
-                <option value="France">France</option>
-                <option value="Germany">Germany</option>
-                <option value="Italy">Italy</option>
-                <option value="Japan">Japan</option>    
-            </select>
-        </div>
-      
+            <!--Email-->
+            <div id="email" class="campos">
+                <label for="email">E-mail*</label>
+                <input type="email" id="email" placeholder="E-MAIL"/>
+            </div>
 
-        <!--ZIP Code-->
-        <div>
-            <label for="zip">ZIP Code*</label><br>
-            <input type="number" id="zip">
-        </div>
+            <!--Confirm Email-->
+            <div id="confirm-email" class="campos">
+                <label for="confirm-email">Confirm E-mail*</label>
+                <input type="email" id="confirm-email" placeholder="CONFIRM E-MAIL"/>
+            </div>
 
-        <!--Newsletter-->
-        <div>
-            <input type="checkbox"/>
-            SIGN UP FOR THE BAND NEWSLETTER
-            <br>
-            Stay up to date on the latest band news, contests, content and sales
-        </div>
+            <!--Password-->
+            <div id="password" class="campos">
+                <label for="password">Password*</label>
+                <input type="password" id="password" placeholder="PASSWORD"/>
+            </div>
 
-        <!--Captcha-->
-        <div>
-            <input type="checkbox"/> Captcha
-        </div>
+            <!--Confirm Password-->
+            <div id="confirm-password" class="campos">
+                <label for="confirm-password">Confirm Password*</label>
+                <input type="password" id="confirm-password" placeholder="CONFIRM PASSWORD"/>
+            </div>
 
-        <!--Send-->
-        <div>
-            <input type="submit" value="JOIN NOW"/>
-            <input type="reset" value="Reset"/>    
-        </div>   
+            <!--Date of Birth-->
+            <div id="birth" class="campos">
+                <label for="date">Date of Birth*</label>
+                <input type="date" id="date">
+            </div>
 
+            <!--Gender-->
+            <div id="gender" class="campo-gender">
+                <label for="gender">Gender*</label>
+                <div class="gender">
+                    <div class="radio">
+                        <label>Male</label>
+                        <input type="radio" name="gender"/>
+                    </div>
+                    <div class="radio">
+                        <label>Female</label>
+                        <input type="radio" name="gender"/>
+                    </div>
+                    <div class="radio">
+                        <label>Other</label>
+                        <input type="radio" name="gender"/>
+                    </div>
+                </div>
+            </div>
+
+            <!--Country-->
+            <div id="country" class="campos">
+                <label>Country*</label>
+                <select name="country">
+                    <option value="Select">SELECT...</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Japan">Japan</option>    
+                </select>
+            </div>
+        
+
+            <!--ZIP Code-->
+            <div id="zip-code" class="campos">
+                <label for="zip">ZIP Code*</label>
+                <input type="number" id="zip">
+            </div>
+
+            <!--Newsletter-->
+            <div id="sign-up" class="campos">
+                <div class="sign-up">
+                    <input type="checkbox"/>
+                    <p>SIGN UP FOR THE BAND NEWSLETTER</p>
+                </div>
+                <p>Stay up to date on the latest band news, contests, content and sales</p>   
+            </div>
+
+            <!--Send-->
+            <div id="join-reset">
+                <input type="submit" value="JOIN NOW"/>
+                <input class="reset" type="reset" value="Reset"/>
+            </div>
+
+        </div> <!--form-container-->
     </form> 
+</div> <!--formulario-->
 
     <!-- footer -->
     <footer> 
@@ -171,6 +271,6 @@
             </ul>                     
         </div>
     </footer>  
-
+</div> <!-- contenedor-->
 </body>
 </html> 
