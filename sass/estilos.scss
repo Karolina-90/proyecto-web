@@ -34,12 +34,8 @@ body {
 
     a {
         text-decoration: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-    }
 
+    }
 }
 
 /* Estilos para botones. Especificar luego en cada uno el width y margin*/
@@ -601,7 +597,7 @@ footer {
             grid: 2fr auto 1fr / repeat(12,1fr);
          //   grid-template-columns: repeat(12,1fr);
          //   grid-template-rows: 1fr auto 1fr;
-
+            background-color: $color-cinco;
         
         .cabecera {
             grid-column: 1/13;
@@ -639,10 +635,6 @@ footer {
                     width: 100%;
                     height: auto;
                 }
-
-               
-
-                
             }
 
             .tracklist {
@@ -888,6 +880,10 @@ footer {
                         @extend .btn;
                         width: 150px;
                         margin: 30px 0px 10px 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-sizing: border-box;
                     }
                 }
             }
