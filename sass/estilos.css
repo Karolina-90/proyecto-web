@@ -1,4 +1,15 @@
 @charset "UTF-8";
+/*
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600&family=Overpass:wght@400;700;900&family=Passion+One:wght@400;700&display=swap');
+</style>
+
+
+font-family: 'Archivo Narrow', sans-serif;
+font-family: 'Overpass', sans-serif;
+font-family: 'Passion One', cursive;
+
+*/
 * {
   margin: 0px;
   padding: 0px;
@@ -25,16 +36,17 @@ body {
 }
 
 /* Estilos para botones. Especificar luego en cada uno el width y margin*/
-.btn, .news .news-sections .box-news .bg-news .box-btn button, #tour-dates .fila .caja-botones .botones, #boton-pag .botones, #club .contenedor .club-principal .club-img .club-enter a {
+.btn, .news .news-sections .box-news .bg-news .box-btn button, #tour .contenedor .dates-table #tour-dates .fila .caja-botones .botones, #tour .contenedor .dates-table #tour-dates .caja-boton #boton-bot, #boton-pag .botones, #club .contenedor .club-principal .club-img .club-enter a {
   height: 45px;
   border: 3px solid white;
   font-weight: 800;
   color: white;
   background-color: transparent;
   font-size: 16px;
+  font-family: "Overpass", sans-serif;
 }
 
-.btn-2, #tour-dates .caja-boton #boton-bot {
+.btn-2 {
   height: 45px;
   border: 3px solid #0C0D0D;
   font-weight: 800;
@@ -43,7 +55,7 @@ body {
   font-size: 16px;
 }
 
-.btn-2:hover, #tour-dates .caja-boton #boton-bot:hover, .btn:hover, .news .news-sections .box-news .bg-news .box-btn button:hover, #tour-dates .fila .caja-botones .botones:hover, #boton-pag .botones:hover, #club .contenedor .club-principal .club-img .club-enter a:hover {
+.btn-2:hover, .btn:hover, .news .news-sections .box-news .bg-news .box-btn button:hover, #tour .contenedor .dates-table #tour-dates .fila .caja-botones .botones:hover, #tour .contenedor .dates-table #tour-dates .caja-boton #boton-bot:hover, #boton-pag .botones:hover, #club .contenedor .club-principal .club-img .club-enter a:hover {
   background-color: #FB3A66;
   color: white;
   cursor: pointer;
@@ -83,14 +95,19 @@ ul li {
       align-self: center;
   padding: 0px 0px 0px 10px;
   width: 40%;
+  /*
+        h1 {
+            color: white;
+            font-family: $fuente-logo;
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-size: 70px;
+        }
+*/
 }
 
-.cabecera .logo h1 {
-  color: white;
-  font-family: "Roboto";
-  letter-spacing: 2px;
-  font-weight: 400;
-  font-size: 70px;
+.cabecera .logo img {
+  width: 500px;
 }
 
 .cabecera #menu {
@@ -513,27 +530,59 @@ footer .redes-container ul li a :hover {
 }
 
 #bio-bg .img-uno {
-  background-image: url("../img/member-1.jpg");
+  background-image: url("../img/bio//member-1.jpg");
 }
 
 #bio-bg .img-dos {
-  background-image: url("../img/member-2.jpg");
+  background-image: url("../img/bio//member-2.jpg");
 }
 
 #bio-bg .img-tres {
-  background-image: url("../img/member-3.jpg");
+  background-image: url("../img/bio//member-3.jpg");
 }
 
 #bio-bg .img-cuatro {
-  background-image: url("../img/member-4.jpg");
+  background-image: url("../img/bio//member-4.jpg");
 }
 
 /* Tour */
-.tour-bg {
+#tour .contenedor {
+  display: -ms-grid;
+  display: grid;
+  grid: 2fr auto auto 1fr/repeat(12, 1fr);
+  background-color: #0C0D0D;
+}
+
+#tour .contenedor .cabecera {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+}
+
+#tour .contenedor .cabecera .logo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: 1 / 1 / 2 / 5;
+}
+
+#tour .contenedor .cabecera #menu {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 5;
+  grid-column: 8/13;
+}
+
+#tour .contenedor .tour-bg {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: 2 / 1 / 3 / 13;
   text-align: center;
   font-family: "Roboto";
   height: 800px;
-  background-image: url("../img/tour-bg.jpg");
+  background-image: url("../img/tour/tour-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -542,10 +591,12 @@ footer .redes-container ul li a :hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  position: relative;
+  opacity: 0.5;
 }
 
-.tour-bg .tour-titles {
-  width: 50%;
+#tour .contenedor .tour-bg .tour-titles {
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,21 +607,74 @@ footer .redes-container ul li a :hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 50;
 }
 
-.tour-bg .tour-titles h1 {
-  font-size: 150px;
+#tour .contenedor .tour-bg .tour-titles img {
+  width: 100%;
 }
 
-.tour-bg .tour-titles h2 {
-  font-size: 120px;
+#tour .contenedor .tour-bg .tour-titles .caja-logo {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-.tour-bg .tour-titles img {
-  width: 400px;
+#tour .contenedor .tour-bg .tour-titles .caja-tour {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 50px;
 }
 
-.tour-bg .tour-titles div {
+#tour .contenedor .tour-bg .tour-titles .caja-tour .glitch {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+}
+
+#tour .contenedor .tour-bg .tour-titles .caja-tour .world-tour {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+}
+
+#tour .contenedor .tour-bg .tour-titles .caja-tour .world-tour img {
+  width: 50%;
+}
+
+#tour .contenedor .tour-bg .tour-titles div {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -583,7 +687,23 @@ footer .redes-container ul li a :hover {
           align-items: center;
 }
 
-.dates-title h3 {
+#tour .contenedor .tour-bg:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(53, 51, 51, 0.6);
+  position: absolute;
+}
+
+#tour .contenedor .dates-table {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: 3 / 1 / 4 / 13;
+}
+
+#tour .contenedor .dates-table .dates-title h3 {
   color: white;
   margin: 10px 0px 0px 0px;
   text-align: center;
@@ -591,7 +711,7 @@ footer .redes-container ul li a :hover {
   font-weight: 800;
 }
 
-#tour-dates {
+#tour .contenedor .dates-table #tour-dates {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -601,13 +721,13 @@ footer .redes-container ul li a :hover {
           flex-direction: column;
 }
 
-#tour-dates .fila {
+#tour .contenedor .dates-table #tour-dates .fila {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#tour-dates .fila .dates-box {
+#tour .contenedor .dates-table #tour-dates .fila .dates-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -616,7 +736,7 @@ footer .redes-container ul li a :hover {
   border-bottom: 1px solid #FB3A66;
 }
 
-#tour-dates .fila .dates-box .date {
+#tour .contenedor .dates-table #tour-dates .fila .dates-box .date {
   border: 3px solid white;
   border-radius: 50px;
   width: 80px;
@@ -637,7 +757,7 @@ footer .redes-container ul li a :hover {
   margin: 20px;
 }
 
-#tour-dates .fila .dates-box .place {
+#tour .contenedor .dates-table #tour-dates .fila .dates-box .place {
   font-weight: 800;
   margin: 0px 0px 5px 5px;
   display: -webkit-box;
@@ -652,17 +772,17 @@ footer .redes-container ul li a :hover {
           justify-content: center;
 }
 
-#tour-dates .fila .dates-box .place .place1 {
+#tour .contenedor .dates-table #tour-dates .fila .dates-box .place .place1 {
   color: #a3a3a3;
   font-size: 30px;
 }
 
-#tour-dates .fila .dates-box .place .place2 {
+#tour .contenedor .dates-table #tour-dates .fila .dates-box .place .place2 {
   color: white;
   font-size: 22px;
 }
 
-#tour-dates .fila .caja-botones {
+#tour .contenedor .dates-table #tour-dates .fila .caja-botones {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,24 +797,32 @@ footer .redes-container ul li a :hover {
   margin-right: 400px;
 }
 
-#tour-dates .fila .caja-botones .botones {
+#tour .contenedor .dates-table #tour-dates .fila .caja-botones .botones {
   width: 110px;
   margin: 5px;
 }
 
-#tour-dates .caja-boton {
+#tour .contenedor .dates-table #tour-dates .caja-boton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: white;
 }
 
-#tour-dates .caja-boton #boton-bot {
+#tour .contenedor .dates-table #tour-dates .caja-boton #boton-bot {
   width: 300px;
   margin: 30px;
+}
+
+#tour .contenedor footer {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: 4 / 1 / 5 / 13;
+  background-color: #262626;
 }
 
 /* Music */

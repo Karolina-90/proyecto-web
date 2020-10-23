@@ -1,3 +1,17 @@
+/*
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600&family=Overpass:wght@400;700;900&family=Passion+One:wght@400;700&display=swap');
+</style>
+
+
+font-family: 'Archivo Narrow', sans-serif;
+font-family: 'Overpass', sans-serif;
+font-family: 'Passion One', cursive;
+
+*/
+
+
+
 $fuente-principal: 'Overpass', sans-serif;
 $fuente-logo: 'Roboto';
 // $fuente-logo: 'Spicy Rice', cursive;
@@ -46,6 +60,7 @@ body {
     color: $color-tres;
     background-color: transparent; 
     font-size: 16px;
+    font-family: $fuente-principal;
 }
 
 .btn-2 {
@@ -74,6 +89,7 @@ ul {
     }
 }
 
+
 .cabecera {
    // background-color:rgba($color: $color-principal, $alpha: 0.5);
     background-color: $color-principal;
@@ -90,6 +106,10 @@ ul {
         padding: 0px 0px 0px 10px;
         width: 40%;
 
+        img {
+            width: 500px;
+        }
+/*
         h1 {
             color: white;
             font-family: $fuente-logo;
@@ -97,6 +117,7 @@ ul {
             font-weight: 400;
             font-size: 70px;
         }
+*/
     }
 
     #menu {
@@ -450,143 +471,223 @@ footer {
     .img-uno{background-image: url("../img/alex-kellerman-bio.jpg")   }
     */
     .img-uno {
-        background-image:url("../img/member-1.jpg");
+        background-image:url("../img/bio//member-1.jpg");
     }
     
-    .img-dos{background-image:url("../img/member-2.jpg")}
+    .img-dos{background-image:url("../img/bio//member-2.jpg")}
     
-    .img-tres{background-image:url("../img/member-3.jpg")}
+    .img-tres{background-image:url("../img/bio//member-3.jpg")}
     
     .img-cuatro{
-        background-image:url("../img/member-4.jpg");
+        background-image:url("../img/bio//member-4.jpg");
     }
 }
 
 
 /* Tour */ 
-.tour-bg {
-    text-align: center;
-    font-family: $fuente-logo;
-    height: 800px;
-    background-image: url("../img/tour-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: flex-end;
+#tour {
+    .contenedor {
+        display: grid;
+        // Filas / Columnas
+        grid: 2fr auto auto 1fr / repeat(12,1fr);
+    //   grid-template-columns: repeat(12,1fr);
+    //   grid-template-rows: 1fr auto 1fr;
+        background-color: $color-principal;
 
-    .tour-titles {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        .cabecera {
+            grid-column: 1/13;
 
-        
-        h1 {
-            font-size: 150px;
-        }
-                
-        h2 {
-            font-size: 120px;  
-        }
+            .logo {
+                // Inicio Row/ Inicio Column / Fin Row / Fin column
+                grid-area: 1 / 1 / 2 / 5;
+            //    grid-column: 1/5;
+            //    grid-row: 1/2;
+            
+            }
 
-        img {
-            width: 400px;
-        }
-
-        div {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-}
-
-.dates-title h3 {
-    color: $color-tres;
-    margin: 10px 0px 0px 0px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 800;
-} 
-
-#tour-dates {
-    display: flex;
-    flex-direction: column;
-
-    .fila {
-        display: flex;
-
-        .dates-box {
-            display: flex;
-            width: 50%;
-            margin-left: 400px;
-            border-bottom: 1px solid $color-secundario;
-
-            .date {
-                border: 3px solid $color-tres;
-                border-radius: 50px;
-                width: 80px;
-                height: 80px;
-                color: white;
-                font-size: 22px;
-                font-weight: 800;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                margin: 20px;
+            #menu {
+                grid-column: 8/13;
             }
             
-            .place {
-                font-weight: 800;
-                margin: 0px 0px 5px 5px;
+        } // .cabecera
+
+        .tour-bg {
+            grid-area: 2 / 1 / 3 / 13;
+            text-align: center;
+            font-family: $fuente-logo;
+            height: 800px;
+            background-image: url("../img/tour/tour-bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            opacity: 0.5;
+        
+            .tour-titles {
+                width: 60%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                z-index: 50;
+                
+                img {
+                    width: 100%;
+                }
 
-                .place1 {
-                    color: $color-cuatro;
-                    font-size: 30px;
+                .caja-logo {
+                    width: 80%;
+                    display: flex;
+                    align-items: flex-end;
                 }
-                
-                .place2 {
-                    color: $color-tres;
-                    font-size: 22px;
+
+                .caja-tour {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    margin-top: 50px;
+
+                    .glitch {
+                        width: 80%;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        height: auto;
+                    }
+
+                    .world-tour {
+                        width: 80%;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        height: auto;
+
+                        img {
+                            width: 50%;
+                        }
+                        
+                        
+                    }
                 }
-                
+
+        
+                div {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
 
-        .caja-botones {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            width: 50%;
-            border-bottom: 1px solid $color-secundario;
-            margin-right: 400px;
-
-            .botones {
-                @extend .btn; 
-                width: 110px;
-                margin: 5px;
-            }
+        .tour-bg:before {
+            content:"";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(53, 51, 51, 0.6);
+            position: absolute;
         }
-    } // .fila
 
-    .caja-boton {
-        display: flex;
-        justify-content: center;
-        background-color: $color-tres;
+        .dates-table {
 
-        #boton-bot {
-            @extend .btn-2;
-            width: 300px;
-            margin: 30px;
+            grid-area: 3 / 1 / 4 / 13;
+
+            .dates-title h3 {
+                color: $color-tres;
+                margin: 10px 0px 0px 0px;
+                text-align: center;
+                font-size: 30px;
+                font-weight: 800;
+            } 
+            
+            #tour-dates {
+                
+                display: flex;
+                flex-direction: column;
+            
+                .fila {
+                    display: flex;
+            
+                    .dates-box {
+                        display: flex;
+                        width: 50%;
+                        margin-left: 400px;
+                        border-bottom: 1px solid $color-secundario;
+            
+                        .date {
+                            border: 3px solid $color-tres;
+                            border-radius: 50px;
+                            width: 80px;
+                            height: 80px;
+                            color: white;
+                            font-size: 22px;
+                            font-weight: 800;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            margin: 20px;
+                        }
+                        
+                        .place {
+                            font-weight: 800;
+                            margin: 0px 0px 5px 5px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+            
+                            .place1 {
+                                color: $color-cuatro;
+                                font-size: 30px;
+                            }
+                            
+                            .place2 {
+                                color: $color-tres;
+                                font-size: 22px;
+                            }
+                            
+                        }
+                    }
+            
+                    .caja-botones {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        width: 50%;
+                        border-bottom: 1px solid $color-secundario;
+                        margin-right: 400px;
+            
+                        .botones {
+                            @extend .btn; 
+                            width: 110px;
+                            margin: 5px;
+                        }
+                    }
+                } // .fila
+            
+                .caja-boton {
+                    display: flex;
+                    justify-content: center;
+            
+                    #boton-bot {
+                        @extend .btn;
+                        width: 300px;
+                        margin: 30px;
+                    }
+                }
+            
+            } // #tour-dates 
+        } // .dates-table
+
+        footer {
+            grid-area: 4 / 1 / 5 / 13;
+            background-color: $color-cinco;
         }
-    }
 
-} // #tour-dates 
+    } // .contenedor Tour
+} // #Tour
 
 /* Music */
 
@@ -1314,4 +1415,3 @@ header label {
         } //footer
     } // .contenedor
 } // media 
-
