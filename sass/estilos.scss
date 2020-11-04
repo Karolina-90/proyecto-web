@@ -407,70 +407,83 @@ ul {
 
     .contenedor {
 
-        .parallax, .texto {
-            margin: 0 auto;
-        }
+        .bio-container {
+
+            .portada {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .parallax, .texto {
+                margin: 0 auto;
+            }
+            
+            .parallax {
+                background-attachment: fixed;
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 35rem; 
+                max-width: 100%;
+                position: relative;
         
-        .parallax {
-            background-attachment: fixed;
-            background-position: top center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 35rem; 
-            max-width: 100%;
-            position: relative;
-    
-            .texto-interior{
+                .texto-interior{
+                    color: white;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    left: 35%;
+                    position: absolute;
+                    text-align: center;
+                    top: 40%;
+                    width: 450px;
+                    text-shadow: 3px 3px 2px rgb(0, 0, 0);
+                    border-bottom: 5px solid $color-secundario;
+                }
+            }
+            
+            .texto {
+                padding: 50px;
+                width: 70%;
+                display: flex;
+                flex-direction: column;
                 color: white;
-                font-size: 2rem;
-                font-weight: bold;
-                left: 35%;
-                position: absolute;
-                text-align: center;
-                top: 40%;
-                width: 450px;
-                text-shadow: 3px 3px 2px rgb(0, 0, 0);
-                border-bottom: 5px solid $color-secundario;
-            }
-        }
         
-        .texto {
-            padding: 50px;
-            width: 70%;
-            display: flex;
-            flex-direction: column;
-            color: white;
-    
-            h2 {
-                color: $color-secundario;
+                h2 {
+                    color: $color-secundario;
+                }
+                
+                .bio-caja-texto {
+                    margin: 10px;
+                }
+        
+                .line {
+                    border-bottom: 1.5px solid $color-secundario;
+                    width: 20%;
+                    margin: 5px auto;
+                }
             }
-            
-            .bio-caja-texto {
-                margin: 10px;
+        
+                /*
+                .img-uno{background-image: url("../img/alex-kellerman-bio.jpg")   }
+                */
+                .img-uno {
+                    background-image:url("../img/bio//member-1.jpg");
+                }
+                
+                .img-dos{background-image:url("../img/bio//member-2.jpg")}
+                
+                .img-tres{background-image:url("../img/bio//member-3.jpg")}
+                
+                .img-cuatro{
+                    background-image:url("../img/bio//member-4.jpg");
+                }
             }
-    
-            .line {
-                border-bottom: 1.5px solid $color-secundario;
-                width: 20%;
-                margin: 5px auto;
-            }
-        }
-    
-            /*
-            .img-uno{background-image: url("../img/alex-kellerman-bio.jpg")   }
-            */
-            .img-uno {
-                background-image:url("../img/bio//member-1.jpg");
-            }
-            
-            .img-dos{background-image:url("../img/bio//member-2.jpg")}
-            
-            .img-tres{background-image:url("../img/bio//member-3.jpg")}
-            
-            .img-cuatro{
-                background-image:url("../img/bio//member-4.jpg");
-            }
-        }
+
+
+        } //.bio-container
+
+        
 
         footer {
             

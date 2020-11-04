@@ -463,17 +463,21 @@ ul li {
   background-color: #0C0D0D;
 }
 
-#bio .contenedor {
+#bio .contenedor .bio-container {
   /*
-            .img-uno{background-image: url("../img/alex-kellerman-bio.jpg")   }
-            */
+                .img-uno{background-image: url("../img/alex-kellerman-bio.jpg")   }
+                */
 }
 
-#bio .contenedor .parallax, #bio .contenedor .texto {
+#bio .contenedor .bio-container .portada img {
+  width: 100%;
+}
+
+#bio .contenedor .bio-container .parallax, #bio .contenedor .bio-container .texto {
   margin: 0 auto;
 }
 
-#bio .contenedor .parallax {
+#bio .contenedor .bio-container .parallax {
   background-attachment: fixed;
   background-position: top center;
   background-repeat: no-repeat;
@@ -483,7 +487,7 @@ ul li {
   position: relative;
 }
 
-#bio .contenedor .parallax .texto-interior {
+#bio .contenedor .bio-container .parallax .texto-interior {
   color: white;
   font-size: 2rem;
   font-weight: bold;
@@ -496,7 +500,7 @@ ul li {
   border-bottom: 5px solid #FB3A66;
 }
 
-#bio .contenedor .texto {
+#bio .contenedor .bio-container .texto {
   padding: 50px;
   width: 70%;
   display: -webkit-box;
@@ -509,33 +513,33 @@ ul li {
   color: white;
 }
 
-#bio .contenedor .texto h2 {
+#bio .contenedor .bio-container .texto h2 {
   color: #FB3A66;
 }
 
-#bio .contenedor .texto .bio-caja-texto {
+#bio .contenedor .bio-container .texto .bio-caja-texto {
   margin: 10px;
 }
 
-#bio .contenedor .texto .line {
+#bio .contenedor .bio-container .texto .line {
   border-bottom: 1.5px solid #FB3A66;
   width: 20%;
   margin: 5px auto;
 }
 
-#bio .contenedor .img-uno {
+#bio .contenedor .bio-container .img-uno {
   background-image: url("../img/bio//member-1.jpg");
 }
 
-#bio .contenedor .img-dos {
+#bio .contenedor .bio-container .img-dos {
   background-image: url("../img/bio//member-2.jpg");
 }
 
-#bio .contenedor .img-tres {
+#bio .contenedor .bio-container .img-tres {
   background-image: url("../img/bio//member-3.jpg");
 }
 
-#bio .contenedor .img-cuatro {
+#bio .contenedor .bio-container .img-cuatro {
   background-image: url("../img/bio//member-4.jpg");
 }
 
