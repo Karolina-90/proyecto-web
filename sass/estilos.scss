@@ -781,6 +781,8 @@ ul {
                     grid-area: 2 / 2 / 3 / 4;
                     display: grid;
                     grid: 1fr 1fr/ 1fr 1fr;
+                    margin-bottom: 20px;
+                    grid-gap: 20px;
 
                     h3 {
                         color: $color-tres;
@@ -815,6 +817,9 @@ ul {
                         grid-area: 1 / 2 / 3 / 3;
                         padding: 10px 10px 10px 0;
 
+                        display: flex;
+                        flex-wrap: wrap;
+
                         p {
                             font-size: 22px;
                             color: $color-tres;
@@ -826,6 +831,11 @@ ul {
                             color: $color-tres;
                             padding: 10px 10px 10px 30px;
                             text-decoration: none;
+
+                            i {
+                                font-size: 30px;
+                                padding: 0 20px 20px 0px;
+                            }
                         }
 
                         a:hover {
@@ -851,6 +861,8 @@ ul {
                     h2 {
                         padding: 20px;
                         color: $color-tres;
+                        font-weight: bold;
+                        font-size: 30px;
                     }
 
                     li {

@@ -914,6 +914,8 @@ ul li {
   display: -ms-grid;
   display: grid;
   grid: 1fr 1fr/ 1fr 1fr;
+  margin-bottom: 20px;
+  grid-gap: 20px;
 }
 
 #music .contenedor .music-container .music-center-container .more-album h3 {
@@ -958,6 +960,11 @@ ul li {
   -ms-grid-column-span: 1;
   grid-area: 1 / 2 / 3 / 3;
   padding: 10px 10px 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #music .contenedor .music-container .music-center-container .more-album .red-album p {
@@ -971,6 +978,11 @@ ul li {
   color: white;
   padding: 10px 10px 10px 30px;
   text-decoration: none;
+}
+
+#music .contenedor .music-container .music-center-container .more-album .red-album a i {
+  font-size: 30px;
+  padding: 0 20px 20px 0px;
 }
 
 #music .contenedor .music-container .music-center-container .more-album .red-album a:hover {
@@ -1004,6 +1016,8 @@ ul li {
 #music .contenedor .music-container .music-center-container .gallery-music h2 {
   padding: 20px;
   color: white;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 #music .contenedor .music-container .music-center-container .gallery-music li {
