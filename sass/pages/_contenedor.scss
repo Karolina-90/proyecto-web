@@ -1,13 +1,10 @@
 .contenedor {
-    display: grid;
-    // Filas / Columnas
-    // grid: 2fr 17fr 1fr / repeat(12,1fr);
-    grid: 100px 1fr 60px / 1fr;
+
     height: 100vh;
 
     .cabecera {
         // Inicio Row/ Inicio Column / Fin Row / Fin column
-        grid-area: 1/ 1/ 2/ -1;
+    
 
         // background-color:rgba($color: $color-principal, $alpha: 0.5);
         background-color: $color-principal;
@@ -36,8 +33,8 @@
             position: relative;
 
             ul {
-
-                position: absolute;
+                background-color: $color-principal;
+            
 
                 li {
                     text-align: center;
@@ -76,7 +73,7 @@
                     #submenu {
                         display: none;
                         background-color: $color-principal;
-
+                        position: absolute;
                     }
                 }
 
@@ -98,7 +95,6 @@
 
     footer {
 
-        grid-area: 3 / 1 / 4 / -1;
 
         background-color: $color-principal;
         color: white;
@@ -160,20 +156,15 @@
 
 
     .contenedor {
-        display: grid;
-        // Filas / Columnas
-        // grid: 2fr 17fr 1fr / repeat(12,1fr);
-        grid: 100px 1fr 60px / 1fr;
 
-    
         .cabecera {
 
             height: 75px;
-           position: relative;
-    
+            position: relative;
+
             .logo {
                 width: 70%;
-    
+
                 img {
                     width: 250px;
                 }
@@ -183,43 +174,43 @@
                 display: flex;
                 align-items: center;
             }
-    
+
             #menu {
                 justify-content: space-between;
                 position: absolute;
-                width: 20%; //50%;
-                top: 200px; //Se pocisiona debajo de la cabecera que tiene 100px 75px
-                right: -436px; //Para que quede oculto -100
+                width: 50%; //50%;
+                top: 75px; //Se pocisiona debajo de la cabecera que tiene 100px 75px
+                right: -100%; //Para que quede oculto -100
                 z-index: 100;
-    
+
                 ul {
                     flex-direction: column;
                     width: 100%;
-    
+
                     li {
-                        width: 100%;  
-    
+                        width: 100%;
+
                     }
-    
+
                     // li
-    
+
                     /* Submenu**/
-    
+
                     .desplegable {
-    
+
                         z-index: 100;
-    
+
                         i {
-                            color: $color-secundario;
+                            color: $color-tres;
                         }
-    
+
                         #submenu {
                             display: none;
                             background-color: $color-principal;
-    
+
                         }
                     }
-    
+
                     .desplegable:hover {
                         #submenu {
                             display: flex !important;
@@ -227,79 +218,53 @@
                         }
                     }
                 }
-    
-                // ul
-            }// #menu
 
-            
+                // ul
+            }
+
+            // #menu
+
+
             #btn-menu:checked~#menu {
                 right: 0px;
                 display: flex;
                 justify-content: flex-end;
                 background-color: $color-secundario;
             }
-    
-            
+
+
         }
-    
+
         // cabecera
-    
+
         footer {
-    
-            grid-area: 3 / 1 / 4 / -1;
-    
-            background-color: $color-principal;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+
             width: 100%;
-            height: 60px;
-    
+
             p {
-                padding: 10px;
+                font-size: 10px;
             }
-    
-            .redes-container ul {
-                display: flex;
-                align-self: center;
-    
-                li {
-                    margin: 5px 10px;
-    
-                    .facebook:hover {
-                        color: #3b5998;
-                    }
-    
-                    .instagram:hover {
-                        color: #e95950;
-                    }
-    
-                    .spotify:hover {
-                        color: #81b71a;
-                    }
-    
-                    .youtube:hover {
-                        color: #bb0000;
-                    }
-    
-                    a {
-                        color: rgb(194, 179, 179);
-                        list-style: none;
-                        font-size: 24px;
-    
-                        :hover {
-                            border-bottom: 2px solid white;
+
+            .redes-container {
+
+                ul {
+
+                    li {
+                        margin: 5px 5px;
+
+                        a {
+                            font-size: 16px;
                         }
                     }
                 }
             }
+
+            // footer
         }
-    
-        // footer
+
+        // contenedor 
     }
-    
-    // contenedor 
+
 }
 
 // media 

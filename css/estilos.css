@@ -106,12 +106,9 @@ header label {
 }
 
 .contenedor {
-  display: grid;
-  grid: 100px 1fr 60px/1fr;
   height: 100vh;
 }
 .contenedor .cabecera {
-  grid-area: 1/1/2/-1;
   background-color: #0C0D0D;
   display: flex;
   justify-content: space-between;
@@ -134,7 +131,7 @@ header label {
   position: relative;
 }
 .contenedor .cabecera #menu ul {
-  position: absolute;
+  background-color: #0C0D0D;
   /* Submenu**/
 }
 .contenedor .cabecera #menu ul li {
@@ -164,13 +161,13 @@ header label {
 .contenedor .cabecera #menu ul .desplegable #submenu {
   display: none;
   background-color: #0C0D0D;
+  position: absolute;
 }
 .contenedor .cabecera #menu ul .desplegable:hover #submenu {
   display: flex !important;
   flex-direction: column;
 }
 .contenedor footer {
-  grid-area: 3/1/4/-1;
   background-color: #0C0D0D;
   color: white;
   display: flex;
@@ -212,10 +209,6 @@ header label {
 
 /***********************************    RESPONSIVE     *********************************/
 @media only screen and (max-width: 600px) {
-  .contenedor {
-    display: grid;
-    grid: 100px 1fr 60px/1fr;
-  }
   .contenedor .cabecera {
     height: 75px;
     position: relative;
@@ -233,9 +226,9 @@ header label {
   .contenedor .cabecera #menu {
     justify-content: space-between;
     position: absolute;
-    width: 20%;
-    top: 200px;
-    right: -436px;
+    width: 50%;
+    top: 75px;
+    right: -100%;
     z-index: 100;
   }
   .contenedor .cabecera #menu ul {
@@ -250,7 +243,7 @@ header label {
     z-index: 100;
   }
   .contenedor .cabecera #menu ul .desplegable i {
-    color: #FB3A66;
+    color: white;
   }
   .contenedor .cabecera #menu ul .desplegable #submenu {
     display: none;
@@ -267,44 +260,16 @@ header label {
     background-color: #FB3A66;
   }
   .contenedor footer {
-    grid-area: 3/1/4/-1;
-    background-color: #0C0D0D;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
-    height: 60px;
   }
   .contenedor footer p {
-    padding: 10px;
-  }
-  .contenedor footer .redes-container ul {
-    display: flex;
-    align-self: center;
+    font-size: 10px;
   }
   .contenedor footer .redes-container ul li {
-    margin: 5px 10px;
-  }
-  .contenedor footer .redes-container ul li .facebook:hover {
-    color: #3b5998;
-  }
-  .contenedor footer .redes-container ul li .instagram:hover {
-    color: #e95950;
-  }
-  .contenedor footer .redes-container ul li .spotify:hover {
-    color: #81b71a;
-  }
-  .contenedor footer .redes-container ul li .youtube:hover {
-    color: #bb0000;
+    margin: 5px 5px;
   }
   .contenedor footer .redes-container ul li a {
-    color: #c2b3b3;
-    list-style: none;
-    font-size: 24px;
-  }
-  .contenedor footer .redes-container ul li a :hover {
-    border-bottom: 2px solid white;
+    font-size: 16px;
   }
 }
 #home .contenedor .home-container .portada {

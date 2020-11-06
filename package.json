@@ -1,0 +1,19 @@
+{
+  "name": "website_project",
+  "version": "0.0.1",
+  "description": "trabajo_final",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/estilos.scss ./css/estilos.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karolina-90/proyecto-web.git"
+  },
+  "author": "Carolina López",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karolina-90/proyecto-web/issues"
+  },
+  "homepage": "https://github.com/Karolina-90/proyecto-web#readme"
+}
