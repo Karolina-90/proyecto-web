@@ -74,11 +74,10 @@ ul li {
 #home #menu > ul > li:nth-child(1) > a,
 #bio #menu > ul > li:nth-child(2) > a,
 #tour #menu > ul > li:nth-child(3) > a,
-#music #menu ul li:nth-child(4) #submenu li:nth-child(1) a,
-#photos #menu ul li:nth-child(4) #submenu li:nth-child(2) a,
-#videos #menu ul li:nth-child(4) #submenu li:nth-child(3) a,
-#store #menu > ul > li:nth-child(5) > a,
-#club #menu > ul > li:nth-child(6) > a {
+#club #menu > ul > li:nth-child(4) > a,
+#music #menu ul li:nth-child(5) #submenu li:nth-child(1) a,
+#photos #menu ul li:nth-child(5) #submenu li:nth-child(2) a,
+#videos #menu ul li:nth-child(5) #submenu li:nth-child(3) a {
   font-weight: bold;
   border: 2px solid white;
   background-color: #FB3A66;
@@ -229,7 +228,7 @@ header label {
     width: 50%;
     top: 75px;
     right: -100%;
-    z-index: 100;
+    z-index: 1000;
   }
   .contenedor .cabecera #menu ul {
     flex-direction: column;
@@ -247,7 +246,7 @@ header label {
   }
   .contenedor .cabecera #menu ul .desplegable #submenu {
     display: none;
-    background-color: #0C0D0D;
+    background-color: #262626;
   }
   .contenedor .cabecera #menu ul .desplegable:hover #submenu {
     display: flex !important;
@@ -543,6 +542,7 @@ header label {
   background-color: #262626;
 }
 
+/***********************************    RESPONSIVE     *********************************/
 /* Tour */
 #tour {
   background-color: #0C0D0D;

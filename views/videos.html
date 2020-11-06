@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -24,19 +25,21 @@
 
         <!-- Header -->
         <header class="cabecera">
-            
-            <div class="logo"> 
+
+            <div class="logo">
                 <img src="../img/blackout-logo-white.svg" alt="">
             </div>
 
-        <!-- Menú -->   
+            <input type="checkbox" id="btn-menu" />
+            <label for="btn-menu"><i class="fas fa-bars"></i></label>
+
+            <!-- Menú -->
             <nav id="menu">
-                <ul >
+                <ul>
                     <li><a href="../index.html">HOME</a></li>
-                    <!--li><a href="views/news.html">NEWS</a></li>-->
                     <li><a href="bio.html">BIO</a></li>
                     <li><a href="tour.html">TOUR</a></li>
-                    <!--li><a href="views/music.html">MUSIC</a><li>-->
+                    <li><a href="club.html">CLUB</a></li>
                     <li class="desplegable"><a href="#">MEDIA <i class="fas fa-sort-down"></i></a>
                         <ul id="submenu">
                             <li><a href="music.html">MUSIC</a></li>
@@ -44,8 +47,7 @@
                             <li><a href="videos.html">VIDEOS</a></li>
                         </ul>
                     </li>
-                    <!--li><a href="views/videos.html">VIDEOS</a></li>-->
-                    <li><a href="club.html">CLUB</a></li>
+
                 </ul>
             </nav>
         </header>
@@ -53,7 +55,7 @@
         <div class="gallery-container">
 
             <div class="video-box">
-                
+
                 <div class="absolute">
                     <a href="#watch">WATCH VIDEOS</a>
                 </div>
@@ -66,88 +68,112 @@
 
 
             <!--Menú de videos-->
-        
-            <nav  id="watch" class="menu-galeria">
-                <ul>       
+
+            <nav id="watch" class="menu-galeria">
+                <ul>
                     <li><a href="">ALL</a></li>
                     <li><a href="">OFFICIAL</a></li>
                     <li><a href="">LIVE</a></li>
                     <li><a href="">TOUR</a></li>
                     <li><a href="">UNPLUGGED</a></li>
                 </ul>
-            </nav>        
-        
+            </nav>
+
             <main class="container-videos">
                 <div class="row-1">
-               
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/qN7gSMPQFss" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
-                        </div>
-                  
-        
-               
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/L-iepu3EtyE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>  
-                        </div>
-                    
-        
-                   
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/-rdmG0k8S8k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                   
-                    
-            
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/xN0FFK8JSYE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                                
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/CMX2lPum_pg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-         
-    
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/Y7VGOnV2QhU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-     
-        
-          
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/NGFSNE18Ywc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-         
-    
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/uGcsIdGOuZY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
 
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/iWIADZKU9dw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-         
-    
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/I_56FINrt04" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-     
-        
-          
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/uCUpvTMis-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-         
-    
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/By7ctqcWxyM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-        
-                </div> 
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/qN7gSMPQFss" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
 
-                
-        
+
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/L-iepu3EtyE" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/-rdmG0k8S8k" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/xN0FFK8JSYE" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/CMX2lPum_pg" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/Y7VGOnV2QhU" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/NGFSNE18Ywc" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/uGcsIdGOuZY" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/iWIADZKU9dw" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/I_56FINrt04" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/uCUpvTMis-Y" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/By7ctqcWxyM" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+
+
             </main> <!-- container-videos -->
-        
+
             <!--Botones para cambiar de páginas-->
             <div class="boton-pag">
                 <button class="botones">1</button>
@@ -156,28 +182,30 @@
                 <button class="botones">4</button>
                 <button class="botones">5</button>
             </div>
-        
+
             <!--<div class="technical-difficulties">
                 <img src="../img/technical-difficulties-2.jpg" alt="">
             </div>
         -->
             <!-- footer -->
         </div> <!-- galeria-container-->
-    
-        <footer> 
+
+        <footer>
             <p> © NAME BAND 2020</p>
             <p>Designed by me</p>
-            <!-- Íconos con Link a Redes Sociales --> 
+            <!-- Íconos con Link a Redes Sociales -->
             <div class="redes-container">
                 <ul>
-                    <li><a href="http://www.facebook.com" class="facebook"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="http://www.facebook.com" class="facebook"><i class="fab fa-facebook-square"></i></a>
+                    </li>
                     <li><a href="http://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="http://www.spotify.com" class="spotify"><i class="fab fa-spotify"></i></a></li>
                     <li><a href="http://www.youtube.com" class="youtube"><i class="fab fa-youtube"></i></a></li>
-                </ul>                     
+                </ul>
             </div>
-        </footer>  
+        </footer>
     </div> <!-- contenedor -->
 
 </body>
-</html> 
+
+</html>

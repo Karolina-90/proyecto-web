@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -21,120 +22,180 @@
 <body id="bio">
     <div class="contenedor">
 
-     <!-- Header -->
-     <header class="cabecera">
-            
-        <div class="logo"> 
-            <img src="../img/blackout-logo-white.svg" alt="">
-        </div>
+        <!-- Header -->
+        <header class="cabecera">
 
-    <!-- Menú -->   
-        <nav id="menu">
-            <ul >
-                <li><a href="../index.html">HOME</a></li>
-                <!--li><a href="views/news.html">NEWS</a></li>-->
-                <li><a href="bio.html">BIO</a></li>
-                <li><a href="tour.html">TOUR</a></li>
-                <!--li><a href="views/music.html">MUSIC</a><li>-->
-                <li class="desplegable"><a href="#">MEDIA <i class="fas fa-sort-down"></i></a>
-                    <ul id="submenu">
-                        <li><a href="music.html">MUSIC</a></li>
-                        <li><a href="photos.html">PHOTOS</a></li>
-                        <li><a href="videos.html">VIDEOS</a></li>
-                    </ul>
-                </li>
-                <!--li><a href="views/videos.html">VIDEOS</a></li>-->
-                <li><a href="club.html">CLUB</a></li>
-            </ul>
-        </nav>
-    </header>
+            <div class="logo">
+                <img src="../img/blackout-logo-white.svg" alt="">
+            </div>
 
-    <main class="bio-container">
+            <input type="checkbox" id="btn-menu" />
+            <label for="btn-menu"><i class="fas fa-bars"></i></label>
 
-         <!--Imágenes de miembros-->
+            <!-- Menú -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="bio.html">BIO</a></li>
+                    <li><a href="tour.html">TOUR</a></li>
+                    <li><a href="club.html">CLUB</a></li>
+                    <li class="desplegable"><a href="#">MEDIA <i class="fas fa-sort-down"></i></a>
+                        <ul id="submenu">
+                            <li><a href="music.html">MUSIC</a></li>
+                            <li><a href="photos.html">PHOTOS</a></li>
+                            <li><a href="videos.html">VIDEOS</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <main class="bio-container">
+
+            <!--Imágenes de miembros-->
             <section class="portada">
                 <img src="../img/bio/bio-group.jpg" alt="imagen de miembros">
             </section>
 
-            <section>            
+            <section>
                 <!--MIEMBRO 1-->
-                    <div class="parallax img-uno">
-                        <div class="texto-interior">
-                            <h2>TAYLOR MOMSEN</h2>
-                        </div>
-                    </div><!-- .parallax -->
+                <div class="parallax img-uno">
+                    <div class="texto-interior">
+                        <h2>TAYLOR MOMSEN</h2>
+                    </div>
+                </div><!-- .parallax -->
 
-                    <div class="texto">
-                        <h2 class="bio-caja-texto">LEAD SINGER</h2>
-                        <p class="bio-caja-texto" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ab, ipsa culpa aliquid, numquam nulla doloremque facilis non sequi accusantium consequuntur earum nobis facere hic ea corporis optio iusto sint? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum obcaecati molestiae fugiat voluptas perspiciatis voluptatem impedit cum fuga assumenda non reprehenderit minus laborum, nisi natus suscipit similique ex ad excepturi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, in velit quasi, perferendis magnam, dolor veritatis ut architecto similique laudantium eveniet voluptate veniam ipsam illum repudiandae! Tempore quae consectetur inventore?</p>
-                        <p class="line"></p>
-                        <p class="bio-caja-texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi distinctio cupiditate et pariatur iusto aperiam veniam ratione animi incidunt quasi fuga reprehenderit quam debitis eligendi excepturi, consequatur necessitatibus? Vero, in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum accusantium dolores, ipsa perspiciatis amet obcaecati? Impedit vitae reprehenderit, nobis, ducimus dolor magni modi, eveniet adipisci minima quos voluptates deserunt numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus vel laborum neque, eligendi aperiam laudantium facere error inventore fugiat, vero molestiae ut quas optio cumque, exercitationem dicta fuga quibusdam accusamus.</p>
-                    </div><!-- .texto -->	
-    
-                    <!--MIEMBRO 2-->
+                <div class="texto">
+                    <h2 class="bio-caja-texto">LEAD SINGER</h2>
+                    <p class="bio-caja-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ab, ipsa
+                        culpa aliquid, numquam nulla doloremque facilis non sequi accusantium consequuntur earum nobis
+                        facere hic ea corporis optio iusto sint? Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Voluptatum obcaecati molestiae fugiat voluptas perspiciatis voluptatem impedit cum fuga
+                        assumenda non reprehenderit minus laborum, nisi natus suscipit similique ex ad excepturi! Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, in velit quasi, perferendis
+                        magnam, dolor veritatis ut architecto similique laudantium eveniet voluptate veniam ipsam illum
+                        repudiandae! Tempore quae consectetur inventore?</p>
+                    <p class="line"></p>
+                    <p class="bio-caja-texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi distinctio
+                        cupiditate et pariatur iusto aperiam veniam ratione animi incidunt quasi fuga reprehenderit quam
+                        debitis eligendi excepturi, consequatur necessitatibus? Vero, in. Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Nostrum accusantium dolores, ipsa perspiciatis amet obcaecati?
+                        Impedit vitae reprehenderit, nobis, ducimus dolor magni modi, eveniet adipisci minima quos
+                        voluptates deserunt numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+                        vel laborum neque, eligendi aperiam laudantium facere error inventore fugiat, vero molestiae ut
+                        quas optio cumque, exercitationem dicta fuga quibusdam accusamus.</p>
+                </div><!-- .texto -->
 
-                    <div class="parallax img-dos">
-                        <div class="texto-interior">
-                            <h2>ALEX TURNER</h2>
-                        </div>
-                    </div><!-- .parallax -->
+                <!--MIEMBRO 2-->
 
-                    <div class="texto">
-                        <h2 class="bio-caja-texto">LEAD GUITAR</h2>
-                        <p class="bio-caja-texto" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ab, ipsa culpa aliquid, numquam nulla doloremque facilis non sequi accusantium consequuntur earum nobis facere hic ea corporis optio iusto sint? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum obcaecati molestiae fugiat voluptas perspiciatis voluptatem impedit cum fuga assumenda non reprehenderit minus laborum, nisi natus suscipit similique ex ad excepturi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, in velit quasi, perferendis magnam, dolor veritatis ut architecto similique laudantium eveniet voluptate veniam ipsam illum repudiandae! Tempore quae consectetur inventore?</p>
-                        <p class="line"></p>
-                        <p class="bio-caja-texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi distinctio cupiditate et pariatur iusto aperiam veniam ratione animi incidunt quasi fuga reprehenderit quam debitis eligendi excepturi, consequatur necessitatibus? Vero, in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum accusantium dolores, ipsa perspiciatis amet obcaecati? Impedit vitae reprehenderit, nobis, ducimus dolor magni modi, eveniet adipisci minima quos voluptates deserunt numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus vel laborum neque, eligendi aperiam laudantium facere error inventore fugiat, vero molestiae ut quas optio cumque, exercitationem dicta fuga quibusdam accusamus.</p>
-                    </div><!-- .texto -->	
-                
-                    <!--MIEMBRO 3-->
+                <div class="parallax img-dos">
+                    <div class="texto-interior">
+                        <h2>ALEX TURNER</h2>
+                    </div>
+                </div><!-- .parallax -->
 
-                    <div class="parallax img-tres">
-                        <div class="texto-interior">
-                            <h2>MATT BELLAMY</h2>
-                        </div>
-                    </div><!-- .parallax -->
+                <div class="texto">
+                    <h2 class="bio-caja-texto">LEAD GUITAR</h2>
+                    <p class="bio-caja-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ab, ipsa
+                        culpa aliquid, numquam nulla doloremque facilis non sequi accusantium consequuntur earum nobis
+                        facere hic ea corporis optio iusto sint? Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Voluptatum obcaecati molestiae fugiat voluptas perspiciatis voluptatem impedit cum fuga
+                        assumenda non reprehenderit minus laborum, nisi natus suscipit similique ex ad excepturi! Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, in velit quasi, perferendis
+                        magnam, dolor veritatis ut architecto similique laudantium eveniet voluptate veniam ipsam illum
+                        repudiandae! Tempore quae consectetur inventore?</p>
+                    <p class="line"></p>
+                    <p class="bio-caja-texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi distinctio
+                        cupiditate et pariatur iusto aperiam veniam ratione animi incidunt quasi fuga reprehenderit quam
+                        debitis eligendi excepturi, consequatur necessitatibus? Vero, in. Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Nostrum accusantium dolores, ipsa perspiciatis amet obcaecati?
+                        Impedit vitae reprehenderit, nobis, ducimus dolor magni modi, eveniet adipisci minima quos
+                        voluptates deserunt numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+                        vel laborum neque, eligendi aperiam laudantium facere error inventore fugiat, vero molestiae ut
+                        quas optio cumque, exercitationem dicta fuga quibusdam accusamus.</p>
+                </div><!-- .texto -->
 
-                    <div class="texto">
-                        <h2 class="bio-caja-texto">BASS</h2>
-                        <p class="bio-caja-texto" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ab, ipsa culpa aliquid, numquam nulla doloremque facilis non sequi accusantium consequuntur earum nobis facere hic ea corporis optio iusto sint? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum obcaecati molestiae fugiat voluptas perspiciatis voluptatem impedit cum fuga assumenda non reprehenderit minus laborum, nisi natus suscipit similique ex ad excepturi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, in velit quasi, perferendis magnam, dolor veritatis ut architecto similique laudantium eveniet voluptate veniam ipsam illum repudiandae! Tempore quae consectetur inventore?</p>
-                        <p class="line"></p>
-                        <p class="bio-caja-texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi distinctio cupiditate et pariatur iusto aperiam veniam ratione animi incidunt quasi fuga reprehenderit quam debitis eligendi excepturi, consequatur necessitatibus? Vero, in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum accusantium dolores, ipsa perspiciatis amet obcaecati? Impedit vitae reprehenderit, nobis, ducimus dolor magni modi, eveniet adipisci minima quos voluptates deserunt numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus vel laborum neque, eligendi aperiam laudantium facere error inventore fugiat, vero molestiae ut quas optio cumque, exercitationem dicta fuga quibusdam accusamus.</p>
-                    </div><!-- .texto -->	
+                <!--MIEMBRO 3-->
 
-                    <!--MIEMBRO 4-->
+                <div class="parallax img-tres">
+                    <div class="texto-interior">
+                        <h2>MATT BELLAMY</h2>
+                    </div>
+                </div><!-- .parallax -->
 
-                    <div class="parallax img-cuatro">
-                        <div class="texto-interior">
-                            <h2>DERYCK WHIBLEY</h2>
-                        </div>
-                    </div><!-- .parallax -->
+                <div class="texto">
+                    <h2 class="bio-caja-texto">BASS</h2>
+                    <p class="bio-caja-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ab, ipsa
+                        culpa aliquid, numquam nulla doloremque facilis non sequi accusantium consequuntur earum nobis
+                        facere hic ea corporis optio iusto sint? Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Voluptatum obcaecati molestiae fugiat voluptas perspiciatis voluptatem impedit cum fuga
+                        assumenda non reprehenderit minus laborum, nisi natus suscipit similique ex ad excepturi! Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, in velit quasi, perferendis
+                        magnam, dolor veritatis ut architecto similique laudantium eveniet voluptate veniam ipsam illum
+                        repudiandae! Tempore quae consectetur inventore?</p>
+                    <p class="line"></p>
+                    <p class="bio-caja-texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi distinctio
+                        cupiditate et pariatur iusto aperiam veniam ratione animi incidunt quasi fuga reprehenderit quam
+                        debitis eligendi excepturi, consequatur necessitatibus? Vero, in. Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Nostrum accusantium dolores, ipsa perspiciatis amet obcaecati?
+                        Impedit vitae reprehenderit, nobis, ducimus dolor magni modi, eveniet adipisci minima quos
+                        voluptates deserunt numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+                        vel laborum neque, eligendi aperiam laudantium facere error inventore fugiat, vero molestiae ut
+                        quas optio cumque, exercitationem dicta fuga quibusdam accusamus.</p>
+                </div><!-- .texto -->
 
-                    <div class="texto">
-                        <h2 class="bio-caja-texto">DRUMS</h2>
-                        <p class="bio-caja-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ab, ipsa culpa aliquid, numquam nulla doloremque facilis non sequi accusantium consequuntur earum nobis facere hic ea corporis optio iusto sint? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum obcaecati molestiae fugiat voluptas perspiciatis voluptatem impedit cum fuga assumenda non reprehenderit minus laborum, nisi natus suscipit similique ex ad excepturi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, in velit quasi, perferendis magnam, dolor veritatis ut architecto similique laudantium eveniet voluptate veniam ipsam illum repudiandae! Tempore quae consectetur inventore?</p>
-                        <p class="line"></p>
-                        <p class="bio-caja-texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi distinctio cupiditate et pariatur iusto aperiam veniam ratione animi incidunt quasi fuga reprehenderit quam debitis eligendi excepturi, consequatur necessitatibus? Vero, in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum accusantium dolores, ipsa perspiciatis amet obcaecati? Impedit vitae reprehenderit, nobis, ducimus dolor magni modi, eveniet adipisci minima quos voluptates deserunt numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus vel laborum neque, eligendi aperiam laudantium facere error inventore fugiat, vero molestiae ut quas optio cumque, exercitationem dicta fuga quibusdam accusamus.</p>
-                    </div><!-- .texto -->	
+                <!--MIEMBRO 4-->
+
+                <div class="parallax img-cuatro">
+                    <div class="texto-interior">
+                        <h2>DERYCK WHIBLEY</h2>
+                    </div>
+                </div><!-- .parallax -->
+
+                <div class="texto">
+                    <h2 class="bio-caja-texto">DRUMS</h2>
+                    <p class="bio-caja-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ab, ipsa
+                        culpa aliquid, numquam nulla doloremque facilis non sequi accusantium consequuntur earum nobis
+                        facere hic ea corporis optio iusto sint? Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Voluptatum obcaecati molestiae fugiat voluptas perspiciatis voluptatem impedit cum fuga
+                        assumenda non reprehenderit minus laborum, nisi natus suscipit similique ex ad excepturi! Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, in velit quasi, perferendis
+                        magnam, dolor veritatis ut architecto similique laudantium eveniet voluptate veniam ipsam illum
+                        repudiandae! Tempore quae consectetur inventore?</p>
+                    <p class="line"></p>
+                    <p class="bio-caja-texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi distinctio
+                        cupiditate et pariatur iusto aperiam veniam ratione animi incidunt quasi fuga reprehenderit quam
+                        debitis eligendi excepturi, consequatur necessitatibus? Vero, in. Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Nostrum accusantium dolores, ipsa perspiciatis amet obcaecati?
+                        Impedit vitae reprehenderit, nobis, ducimus dolor magni modi, eveniet adipisci minima quos
+                        voluptates deserunt numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+                        vel laborum neque, eligendi aperiam laudantium facere error inventore fugiat, vero molestiae ut
+                        quas optio cumque, exercitationem dicta fuga quibusdam accusamus.</p>
+                </div><!-- .texto -->
 
 
             </section> <!-- .content -->
-  </main> <!--bio-container-->
+        </main>
+        <!--bio-container-->
 
-    <!-- footer -->
-    <footer> 
-        <p> © NAME BAND 2020</p>
-        <p>Designed by me</p>
-        <!-- Íconos con Link a Redes Sociales --> 
-        <div class="redes-container">
-            <ul>
-                <li><a href="http://www.facebook.com" class="facebook"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a href="http://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="http://www.spotify.com" class="spotify"><i class="fab fa-spotify"></i></a></li>
-                <li><a href="http://www.youtube.com" class="youtube"><i class="fab fa-youtube"></i></a></li>
-            </ul>                     
-        </div>
-    </footer>  
-</div> <!-- contenedor -->
+        <!-- footer -->
+        <footer>
+            <p> © NAME BAND 2020</p>
+            <p>Designed by me</p>
+            <!-- Íconos con Link a Redes Sociales -->
+            <div class="redes-container">
+                <ul>
+                    <li><a href="http://www.facebook.com" class="facebook"><i class="fab fa-facebook-square"></i></a>
+                    </li>
+                    <li><a href="http://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="http://www.spotify.com" class="spotify"><i class="fab fa-spotify"></i></a></li>
+                    <li><a href="http://www.youtube.com" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div> <!-- contenedor -->
 
 </body>
-</html> 
+
+</html>
