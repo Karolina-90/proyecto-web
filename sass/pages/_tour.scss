@@ -1,0 +1,202 @@
+/* Tour */
+
+#tour {
+
+    background-color: $color-principal;
+
+    .contenedor {
+
+        .tour-container {
+            grid-area: 2 / 1 / 3 / -1;
+
+            .tour-bg {
+
+                text-align: center;
+                font-family: $fuente-logo;
+                height: 800px;
+                background-image: url("../img/tour/tour-bg.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+                opacity: 0.5;
+
+                .tour-titles {
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    z-index: 50;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .caja-logo {
+                        width: 80%;
+                        display: flex;
+                        align-items: flex-end;
+                    }
+
+                    .caja-tour {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        margin-top: 50px;
+
+                        .glitch {
+                            width: 80%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: center;
+                            height: auto;
+                        }
+
+                        .world-tour {
+                            width: 80%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: center;
+                            height: auto;
+
+                            img {
+                                width: 50%;
+                            }
+
+                        }
+                    }
+
+
+                    div {
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .tour-bg:before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: rgba(43, 105, 146, 0.5);
+                position: absolute;
+            }
+
+            .dates-table {
+
+                .dates-title h3 {
+                    color: $color-tres;
+                    margin: 20px 0px 0px 0px;
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: 800;
+                }
+
+                #tour-dates {
+
+                    display: flex;
+                    flex-direction: column;
+
+                    .fila {
+                        display: flex;
+
+                        .dates-box {
+                            display: flex;
+                            width: 50%;
+                            margin-left: 400px;
+                            border-bottom: 1px solid $color-secundario;
+
+                            .date {
+                                border: 3px solid $color-tres;
+                                border-radius: 50px;
+                                width: 80px;
+                                height: 80px;
+                                color: white;
+                                font-size: 22px;
+                                font-weight: 800;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                text-align: center;
+                                margin: 20px;
+                            }
+
+                            .place {
+                                font-weight: 800;
+                                margin: 0px 0px 5px 5px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+
+                                .place1 {
+                                    color: $color-cuatro;
+                                    font-size: 30px;
+                                }
+
+                                .place2 {
+                                    color: $color-tres;
+                                    font-size: 22px;
+                                }
+
+                            }
+                        }
+
+                        .caja-botones {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            width: 50%;
+                            border-bottom: 1px solid $color-secundario;
+                            margin-right: 400px;
+
+                            .botones {
+                                @extend .btn;
+                                width: 110px;
+                                margin: 5px;
+                            }
+                        }
+                    }
+
+                    // .fila
+
+                    .caja-boton {
+                        display: flex;
+                        justify-content: center;
+
+                        #boton-bot {
+                            @extend .btn;
+                            width: 300px;
+                            margin: 30px;
+                        }
+                    }
+
+                }
+
+                // #tour-dates 
+            }
+
+            // .dates-table
+
+
+        }
+
+        // .tour-container
+
+
+
+        footer {
+
+            background-color: $color-cinco;
+        }
+
+    }
+
+    // .contenedor Tour
+}
+
+// #Tour

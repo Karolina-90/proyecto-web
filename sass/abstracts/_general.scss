@@ -1,0 +1,75 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $fuente-principal;
+    font-weight: 300;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 2000px;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+ul {
+    display: flex;
+
+    li {
+        list-style: none;
+    }
+}
+
+
+
+/* Página Activa */
+
+#home #menu>ul>li:nth-child(1)>a,
+#bio #menu>ul>li:nth-child(2)>a,
+#tour #menu>ul>li:nth-child(3)>a,
+#music #menu ul li:nth-child(4) #submenu li:nth-child(1) a,
+#photos #menu ul li:nth-child(4) #submenu li:nth-child(2) a,
+#videos #menu ul li:nth-child(4) #submenu li:nth-child(3) a,
+#store #menu>ul>li:nth-child(5)>a,
+#club #menu>ul>li:nth-child(6)>a {
+    font-weight: bold;
+    border: 2px solid $color-tres;
+    background-color: $color-secundario;
+}
+
+/* Páginas en construcción*/
+
+.technical-difficulties img {
+    width: 100%;
+    background-size: cover;
+}
+
+/* Responsive Design */
+
+/* Menu bar */
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    margin: 0;
+    display: none;
+    padding: 0px 25px;
+    color: white;
+    font-size: 40px;
+    transition: all 500ms ease;
+}

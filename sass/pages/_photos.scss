@@ -1,0 +1,197 @@
+/* Photos */
+#photos {
+
+    background-color: $color-principal;
+
+    .contenedor {
+
+        .gallery-container {
+
+            grid-area: 2 / 1 / 3 / -1;
+
+            display: grid;
+            grid: auto auto 1fr / 1fr 5fr 1fr;
+
+            .menu-galeria {
+                grid-area: 1 / 1 / 2 / -1;
+            }
+
+            .container-photos {
+                grid-area: 2 / 2 / 3 / 3;
+                background-color: $color-principal;
+
+                display: grid;
+                // grid: repeat(5, 1fr) / repeat(3, 1fr);
+                grid-template-columns: repeat(3, 1fr);
+                //grid-template-rows: auto;
+                grid-auto-rows: 250px;
+                padding: 20px;
+                grid-gap: 10px;
+
+
+                .gallery-item:nth-child(1) {
+                    grid-row-start: span 2;
+                    grid-column-start: span 2;
+                }
+
+
+                .gallery-item:nth-child(4) {
+                    grid-column-start: span 2;
+                }
+
+                .gallery-item:nth-child(5) {
+                    grid-row-start: span 2;
+                }
+
+                .gallery-item:nth-child(9) {
+                    grid-row-end: span 2;
+                    grid-column-end: span 2;
+                }
+
+                .gallery-item:nth-child(10) {
+                    grid-row-end: span 2;
+                }
+
+
+                .gallery-item {
+
+                    overflow: hidden;
+
+
+
+                    a {
+                        box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+                        overflow: hidden;
+                        cursor: pointer;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: transform 0.5s;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        img {
+
+                            filter: blur(2px);
+                            transform: rotate(5deg) scale(1.3);
+                        }
+
+
+                    }
+                }
+            }
+
+            // .container-photos
+
+            .lightbox {
+                position: fixed;
+                top: 0;
+                left: 0;
+                background: rgba($color: #000000, $alpha: 0.5);
+                width: 100%;
+                height: 100vh;
+                z-index: 1000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: scale(0);
+                transition: transform .3s ease-in-out;
+
+                img {
+                    width: 75vw;
+                    //     max-height: 70vh;
+                }
+
+                .close {
+                    display: block;
+                    position: absolute;
+                    top: 40px;
+                    right: 40px;
+                    background-color: $color-cuatro;
+                    color: $color-tres;
+                    text-decoration: none;
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    border-radius: 50%;
+                }
+
+                .next {
+                    display: block;
+                    background-color: $color-cinco;
+                    color: $color-tres;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    text-decoration: none;
+                    text-align: center;
+
+                }
+
+            }
+
+            .lightbox:target {
+                transform: scale(1);
+            }
+
+            .boton-pag {
+                grid-area: 3 / 1 / 4 / -1;
+            }
+        }
+
+        // .galeria-container
+    }
+
+    // .contenedor
+}
+
+// #photos
+
+
+//GENERAL Photos Videos
+.contenedor {
+
+    .gallery-container {
+
+        .menu-galeria {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            background-color: $color-secundario;
+
+            li a {
+                text-decoration: none;
+                color: $color-principal;
+                font-weight: bold;
+                padding: 5px;
+            }
+
+            a:hover {
+                color: $color-tres;
+            }
+        }
+
+        // .menu-galeria
+    }
+
+    // .galeria-container
+
+    .boton-pag {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background-color: $color-cinco;
+
+        .botones {
+            @extend .btn;
+            width: 50px;
+            margin: 5px;
+        }
+    }
+}
