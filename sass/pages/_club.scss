@@ -68,27 +68,16 @@
 
                 display: grid;
                 grid: repeat(3, 1fr) / 1fr 2fr 1fr;
-
+                // grid: repeat(3, 1fr)/repeat(auto-fill, minmax(320px, 1fr));
+                justify-content: center;
                 width: 100%;
                 background-color: rgba($color: $color-principal, $alpha: 0.5);
                 color: $color-tres;
 
-                .block-1 {
-                    grid-area: 1 / 2 / 2 / 3;
-                    display: flex;
-                    justify-content: space-around;
-                }
-
-                .block-2 {
-                    grid-area: 2 / 2 / 3 / 3;
-                    display: flex;
-                    justify-content: space-around;
-                }
-
-                .block-3 {
-                    grid-area: 3 / 2 / 4 / 3;
-                    display: flex;
-                    justify-content: space-around;
+                .benefits-box {
+                    grid-area: 1 / 2 / 4 / 3;
+                    display: grid;
+                    grid: repeat(3, 1fr)/repeat(auto-fill, minmax(320px, 1fr));
                 }
 
                 .block {
@@ -124,7 +113,7 @@
             .formulario {
                 grid-area: 4 / 1 / 5 / 13;
                 display: grid;
-                grid: 1fr / 1fr 2fr 1fr;
+                grid: 1fr/1fr minmax(320px, 2fr) 1fr;
                 background-color: rgba($color: $color-principal, $alpha: 0.8);
 
                 form {
@@ -322,3 +311,140 @@
 }
 
 // #club
+
+
+/***********************************    RESPONSIVE     *********************************/
+
+
+@media only screen and (max-width: 600px) {
+
+    #club {
+
+        .contenedor {
+
+            .club-container {
+
+
+
+                .club-principal {
+
+
+                    .club-img {
+
+                        display: flex;
+                        flex-wrap: wrap;
+
+
+                        height: 50vh;
+
+
+                        .club-enter {
+
+                            a {
+                                width: 100px;
+                            }
+                        }
+                    }
+
+                    h2 {
+                        font-size: 30px;
+                        padding-bottom: 15px;
+                    }
+
+                    h3 {
+                        font-size: 18px;
+                        padding: 10px;
+                        text-align: center;
+                    }
+                }
+
+                // .club-principal
+
+                .benefits-club {
+
+                    display: grid;
+                    grid: repeat(3, 1fr) / 1fr 2fr 1fr;
+                    // grid: repeat(3, 1fr)/repeat(auto-fill, minmax(320px, 1fr));
+                    justify-content: center;
+                    width: 100%;
+                    background-color: rgba($color: $color-principal, $alpha: 0.5);
+                    color: $color-tres;
+
+                    .benefits-box {
+
+
+                        .block {
+
+
+                            .block-img {
+
+
+                                img {
+                                    height: 80px;
+                                }
+                            }
+
+                            .block-text {
+
+                                h4 {
+                                    font-size: 18px;
+                                }
+
+                                p {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .formulario {
+                    grid-area: 4 / 1 / 5 / 13;
+                    display: grid;
+                    grid: 1fr/1fr minmax(320px, 2fr) 1fr;
+                    background-color: rgba($color: $color-principal, $alpha: 0.8);
+
+                    form {
+
+
+                        .form-container {
+
+
+                            #join-reset {
+
+                                display: flex;
+                                justify-content: center;
+
+                                input {
+
+                                    width: 100px;
+                                    height: 30px;
+                                    font-size: 12px;
+
+                                }
+
+                            }
+
+
+
+                            // .form-container
+                        }
+
+                        // form
+                    }
+
+                    // .formulario
+
+                }
+
+                // .club-container
+            }
+
+            // .contenedor   
+        }
+
+        // #club
+
+    }
+
+}

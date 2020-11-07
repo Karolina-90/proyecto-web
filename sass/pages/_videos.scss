@@ -97,3 +97,73 @@
 }
 
 // #videos
+
+
+/***********************************    RESPONSIVE     *********************************/
+
+
+@media only screen and (max-width: 600px) {
+    #videos {
+
+
+        .contenedor {
+    
+            .gallery-container {
+    
+                
+    
+                .video-box {
+        
+    
+                    .absolute {
+      
+                        a {
+                            width: 200px;
+                            height: 50px;
+                        }
+                    }
+                }
+    
+    
+    
+    
+    
+                .menu-galeria {
+          
+                }
+    
+                .container-videos {
+                    
+                    width: 100%;
+                    height: auto;
+    
+                    iframe {
+
+                        width: 100%;
+                        padding: 5px;    
+                    }
+    
+                    .row-1 {
+
+                    }
+    
+                    .row-2 {
+
+                    }
+                }
+    
+                .boton-pag {
+
+                }
+            }
+    
+            // .galeria-container
+        }
+    
+        // .contenedor
+    }
+    
+    // #videos
+
+
+}

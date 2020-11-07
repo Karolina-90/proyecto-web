@@ -18,23 +18,23 @@
             }
             
             .parallax {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 background-attachment: fixed;
                 background-position: top center;
                 background-repeat: no-repeat;
                 background-size: cover;
-                height: 35rem; 
+                height: 600px; 
                 max-width: 100%;
                 position: relative;
         
                 .texto-interior{
                     color: white;
-                    font-size: 2rem;
+                    font-size: 40px;
                     font-weight: bold;
-                    left: 35%;
                     position: absolute;
                     text-align: center;
-                    top: 40%;
-                    width: 450px;
                     text-shadow: 3px 3px 2px rgb(0, 0, 0);
                     border-bottom: 5px solid $color-secundario;
                 }
@@ -95,5 +95,61 @@
 
 @media only screen and (max-width: 600px) {
 
+    #bio {
+            
+        .contenedor {
+    
+            .bio-container {
+    
+                                
+                .parallax {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-attachment: fixed;
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 35rem; 
+                    max-width: 100%;
+                    position: relative;
+            
+                    .texto-interior{
+                        color: white;
+                        font-size: 2rem;
+                        font-weight: bold;
+                        position: absolute;
+                        text-align: center;
+                        text-shadow: 3px 3px 2px rgb(0, 0, 0);
+                        border-bottom: 5px solid $color-secundario;
+
+                        h2 {
+               //             font-size: 25px;
+                        }
+                    }
+                }
+                
+                .texto {
+                    width: 100%;
+
+
+                    
+                    .bio-caja-texto {
+                        margin: 10px;
+                    }
+            
+                    .line {
+                        border-bottom: 1.5px solid $color-secundario;
+                        width: 20%;
+                        margin: 5px auto;
+                    }
+                }
+     
+                }
+    
+    
+            } //.bio-container
+
+        } 
 
 } //media

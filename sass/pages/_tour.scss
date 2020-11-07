@@ -13,7 +13,8 @@
 
                 text-align: center;
                 font-family: $fuente-logo;
-                height: 800px;
+                height: 65vw;
+                max-height: 800px;
                 background-image: url("../img/tour/tour-bg.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -101,14 +102,17 @@
 
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
+                    width: 100%;
 
                     .fila {
                         display: flex;
+                        justify-content: center;
+                        width: 50%;
 
                         .dates-box {
                             display: flex;
                             width: 50%;
-                            margin-left: 400px;
                             border-bottom: 1px solid $color-secundario;
 
                             .date {
@@ -152,7 +156,6 @@
                             justify-content: flex-end;
                             width: 50%;
                             border-bottom: 1px solid $color-secundario;
-                            margin-right: 400px;
 
                             .botones {
                                 @extend .btn;
@@ -200,3 +203,119 @@
 }
 
 // #Tour
+
+/***********************************    RESPONSIVE     *********************************/
+
+
+@media only screen and (max-width: 600px) {
+    #tour {
+
+        background-color: $color-principal;
+
+        .contenedor {
+
+            .tour-container {
+
+                .tour-bg {
+
+                    height: 60vh;
+
+
+                    .tour-titles {
+                        width: 100%;
+
+                        .caja-logo {
+                            width: 100%;
+
+                        }
+
+                        .caja-tour {
+                            width: 90%;
+                            display: flex;
+                            margin: 10px;
+
+                            .glitch {
+                                width: 100%;
+                            }
+
+                            .world-tour {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .dates-table {
+
+                    .dates-title h3 {
+                        font-size: 26px;
+                    }
+
+                    #tour-dates {
+
+                        .fila {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            border-bottom: 1px solid $color-secundario;
+
+                            .dates-box {
+                                display: flex;
+                                width: 100%;
+                                border-bottom: 0;
+
+                                .date {
+                                    border-radius: 50px;
+                                    width: 25%;
+                                    height: 70px;
+                                    font-size: 16px;
+                                }
+
+                                .place {
+                                    width: 75%;
+                                    display: flex;
+                                    justify-content: center;
+                                    margin: 0;
+
+                                    .place1 {
+                                        font-size: 20px;
+                                    }
+
+                                    .place2 {
+                                        font-size: 15px;
+                                    }
+
+                                }
+                            }
+
+                            .caja-botones {
+                                display: flex;
+                                justify-content: center;
+                                width: 100%;
+                                padding-bottom: 10px;
+                            }
+                        }
+
+                        // .fila
+
+
+                    }
+
+                    // #tour-dates 
+                }
+
+                // .dates-table
+
+
+            }
+
+            // .tour-container
+        }
+
+        // .contenedor Tour
+    }
+
+
+
+}
